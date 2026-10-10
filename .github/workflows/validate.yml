@@ -1,0 +1,37 @@
+name: Validate both websites
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Build and check WholeMind Living
+        run: python3 build.py --deploy && python3 check_site.py
+        env:
+          SITE_ID: 259722e8-d265-4f33-8da3-97fe1792a484
+      - name: Build and check The Maxine Project
+        run: python3 build.py --deploy && python3 check_site.py
+        env:
+          SITE_ID: b0146eb7-4a71-4b60-a0ad-bee6385698f2
+      - name: Appearance preference tests
+        run: node test_appearance_state.js
+      - name: Refuse a mismatched brand
+        shell: bash
+        run: |
+          if SITE_ID=259722e8-d265-4f33-8da3-97fe1792a484 SITE_BRAND=maxine python3 build.py --deploy; then
+            echo 'ERROR: accepted an incorrect brand'
+            exit 1
+          fi

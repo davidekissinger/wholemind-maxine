@@ -1,0 +1,14 @@
+.netlify/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+publish/
+dist/
+preview/
+qa/
+APPEARANCE_STATE_TESTS.json
+APPEARANCE_TEST_RESULTS.json
+.DS_Store
+Thumbs.db

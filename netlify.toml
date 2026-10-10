@@ -1,0 +1,8 @@
+[build]
+  command = "python3 build.py --deploy && python3 check_site.py"
+  publish = "publish"
+
+# The two existing Netlify project IDs select their own brand automatically.
+# Other projects must set SITE_BRAND=wholemind or SITE_BRAND=maxine.
+# Review/noindex stays on unless LAUNCH_MODE=public is explicitly approved.
+# No forms, payments, analytics, clinical services or private-data storage.
