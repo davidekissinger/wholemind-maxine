@@ -1,0 +1,83 @@
+name: Import existing resource PDFs
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/import-resources.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: import-existing-resource-pdfs
+  cancel-in-progress: false
+
+jobs:
+  import:
+    if: github.repository == 'davidekissinger/wholemind-maxine' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Fetch the existing public PDFs and verify every byte
+        shell: python
+        run: |
+          import hashlib
+          import json
+          import pathlib
+          import urllib.request
+          from concurrent.futures import ThreadPoolExecutor
+
+          origins = {
+              'wholemind': 'https://6ac97c0ce3ef05663efa685c--wholemindliving.netlify.app',
+              'maxine': 'https://6ac97c412212dcbbb4be0b5e--themaxineproject.netlify.app',
+          }
+          resources = {
+              'WholeMind_Everyday_Guide.pdf': ('wholemind', '3b31fd6826d5d67e818e2c7493ebaba7ef1e18d448bbb315d93b3643660b63bf'),
+              'A_Conversation_Not_a_Test.pdf': ('wholemind', 'f2e95e1f91d1d3325a853c4a6841cc66ec478398313f47c3fc3994d58b0a8339'),
+              'One_Meaningful_Step.pdf': ('wholemind', 'e509750f92ed63d55ad903e1cfe7c447e923591f1d078168419efb5206a6900a'),
+              'When_Memory_Changes.pdf': ('maxine', '2a766eb3ef442511191b9ae0e07d091ecdd1af21229a1d41a1e5f9dd30a447b8'),
+              'What_Matters_to_Me.pdf': ('maxine', '1ea04cf7c64b596feedd0464d6244354969498ef9718d20225ade44d0eb6ad98'),
+              'Find_Your_Next_Step.pdf': ('maxine', '8758c7b7c60b7bdb6545593ddb94c809527d49bbd65ded8684e2514791c00959'),
+          }
+          directory = pathlib.Path('downloads')
+          directory.mkdir(exist_ok=True)
+
+          def import_pdf(item):
+              name, (brand, expected) = item
+              path = directory / name
+              if path.exists():
+                  data = path.read_bytes()
+              else:
+                  request = urllib.request.Request(origins[brand] + '/downloads/' + name,
+                      headers={'User-Agent': 'WholeMind-Maxine-Repository-Migration/1.0'})
+                  with urllib.request.urlopen(request, timeout=45) as response:
+                      data = response.read(2000000)
+              actual = hashlib.sha256(data).hexdigest()
+              if not data.startswith(b'%PDF-') or actual != expected:
+                  raise RuntimeError('PDF verification failed: ' + name)
+              path.write_bytes(data)
+              return name + ': SHA-256 verified'
+
+          for result in ThreadPoolExecutor(max_workers=3).map(import_pdf, resources.items()):
+              print(result)
+          pathlib.Path('BASELINE_PDF_HASHES.json').write_text(
+              json.dumps({name: item[1] for name, item in sorted(resources.items())}, indent=2) + '\n')
+      - name: Store the original PDF files in GitHub
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add downloads/*.pdf BASELINE_PDF_HASHES.json
+          if git diff --cached --quiet; then
+            echo 'All six verified PDFs are already committed.'
+            exit 0
+          fi
+          git commit -m 'Import six original resource PDFs with verified SHA-256 hashes'
+          git pull --rebase origin main
+          git push origin HEAD:main
