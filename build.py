@@ -11,6 +11,7 @@ sys.path.insert(0,str(ROOT/'src'))
 from content import BRANDS, RESOURCES, SOURCES, DATE, SCOPE, RELATIONSHIP
 from family_story import family_story
 from meet_maxine import meet_maxine_page
+from family_account import family_account_page
 from research import RESEARCH_PAGES, research_page, home_feature, founder_section
 E=html.escape
 REVIEW=not ('--public' in sys.argv or os.environ.get('LAUNCH_MODE') == 'public')
@@ -74,6 +75,9 @@ def content_page(b,kind,sibling):
  if kind=='meet-maxine':
   if b!='maxine': raise ValueError('Meet Maxine belongs to The Maxine Project')
   return meet_maxine_page()
+ if kind=='family-account':
+  if b!='maxine': raise ValueError('The family account belongs to The Maxine Project')
+  return family_account_page()
  if kind=='story':
   return page_intro('In honor of Maxine Boggs',re.sub('<[^>]+>',' ',c['story_title']),c['story_text'])+'<div class="wrap reading section">'+paragraphs(c['story_detail'])+family_story(b,sibling)+'<h2>Dignity. Connection. Fuller living.</h2><p>These words describe the commitment behind the work. They guide what we make, how we write, and the experience we want people to have when they arrive here.</p><p>The founding inspiration is shared. The focus of each brand is distinct. Neither requires a person’s identity to be reduced to a diagnosis or a test result.</p><p class="story-credit">Founder: David E. Kissinger, BSHA, RN</p></div>'+relation_panel(b,sibling)
  if kind=='connect':
@@ -103,8 +107,8 @@ def resource_page(slug):
 def document(b,path,body,prefix,sibling):
  c=BRANDS[b]; kind='research' if path in RESEARCH_PAGES else path[:-5]
  slug=Path(path).stem
- title=RESEARCH_PAGES[path][0] if path in RESEARCH_PAGES else (RESOURCES[slug]['title'] if path.startswith('resources/') else {'index':c['name'],'approach':'Our approach','resources':'Free resources','story':'Our story','meet-maxine':'Meet Maxine · Doris Maxine (Ratcliff) Boggs','connect':'Connect','relationship':'Our relationship','privacy':'Privacy','accessibility':'Accessibility','404':'Page not found'}[kind])
- description=RESEARCH_PAGES[path][1] if path in RESEARCH_PAGES else RESOURCES[slug]['description'] if path.startswith('resources/') else 'Meet Doris Maxine (Ratcliff) Boggs, the woman and grandmother whose life inspired The Maxine Project.' if path=='meet-maxine.html' else c['intro']
+ title=RESEARCH_PAGES[path][0] if path in RESEARCH_PAGES else (RESOURCES[slug]['title'] if path.startswith('resources/') else {'index':c['name'],'approach':'Our approach','resources':'Free resources','story':'Our story','meet-maxine':'Meet Maxine · Doris Maxine (Ratcliff) Boggs','family-account':"The Family Account · I'll Move Over",'connect':'Connect','relationship':'Our relationship','privacy':'Privacy','accessibility':'Accessibility','404':'Page not found'}[kind])
+ description=RESEARCH_PAGES[path][1] if path in RESEARCH_PAGES else RESOURCES[slug]['description'] if path.startswith('resources/') else 'Meet Doris Maxine (Ratcliff) Boggs, the woman and grandmother whose life inspired The Maxine Project.' if path=='meet-maxine.html' else "Rev. John Robert Boggs Jr., his family account I'll Move Over, and the history that inspires The Maxine Project." if path=='family-account.html' else c['intro']
  canonical=ORIGINS[b]+'/'+(path[:-10] if path.endswith('index.html') else path)
  robots='noindex, nofollow' if REVIEW or path=='404.html' else 'index, follow'
  font='<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet">'
@@ -129,7 +133,7 @@ def build():
     shutil.copy2(pdf,target/'downloads'/pdf.name)
    paths=['index.html']+[p+'.html' for p in ('approach','resources','story','connect','relationship','privacy','accessibility','404')]+['resources/'+s+'.html' for s in c['resources']]
    if b=='maxine':
-    paths.append('meet-maxine.html')
+    paths.extend(('meet-maxine.html', 'family-account.html'))
     paths.extend(RESEARCH_PAGES)
    for path in paths:
     sub=path.startswith('resources/');depth=len(Path(path).parts)-1;prefix='../'*depth

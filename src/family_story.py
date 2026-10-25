@@ -58,6 +58,8 @@ def family_story(brand: str, sibling: str) -> str:
         '<p class="editorial-note">These are bibliographic listings, not a comparison of the books’ contents. '
         'The title and copyright pages have not yet been examined for this website. Boggs Books is identified here '
         'as the historical publisher; no current affiliation, publishing rights, or book sales by either website are claimed.</p>'
+        '<p><a class="text-link" href="family-account.html">Explore Rev. Boggs’s dedicated family account '
+        '<span aria-hidden="true">→</span></a></p>'
         '<details class="future-note"><summary>About the family history and sources</summary>'
         '<p>The family relationships, caregiving duration, and connection between the book and this project are supplied '
         'by founder David E. Kissinger. The first-person text above is the founder’s story, not a quotation from the book.</p>'
