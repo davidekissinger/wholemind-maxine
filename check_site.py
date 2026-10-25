@@ -36,7 +36,8 @@ def main():
     for brand in ('wholemind', 'maxine'):
         root = ROOT / 'dist' / brand
         paths = sorted(root.rglob('*.html'))
-        assert len(paths) == 12, f'{brand}: expected 12 pages, found {len(paths)}'
+        expected_pages = 15 if brand == 'maxine' else 12
+        assert len(paths) == expected_pages, f'{brand}: expected {expected_pages} pages, found {len(paths)}'
         for path in paths:
             page = Page(path.read_text(encoding='utf-8'))
             assert page.brand == brand, f'Wrong brand: {path}'
@@ -84,6 +85,9 @@ def main():
         assert expected_files == actual_files, 'Publish file set differs from the selected brand'
         for relative in expected_files:
             assert (selected_root / relative).read_bytes() == (publish / relative).read_bytes(), relative
+    from test_research import run_checks
+    research_checks = run_checks(ROOT)
+    print(f'PASS: {research_checks} research integrity checks.')
     print(f'PASS: {len(pages)} pages, {checked} internal references, six unchanged PDFs, and publish integrity.')
 
 if __name__ == '__main__':
