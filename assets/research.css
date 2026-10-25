@@ -1,0 +1,39 @@
+/* Research pages extend the existing color tokens; no new palette or trackers. */
+body[data-brand=maxine] .brand-header{flex-wrap:wrap}
+.research-subnav{display:flex;flex-wrap:wrap;gap:8px 26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-top:10px;padding-bottom:10px;font-size:16px}
+.research-subnav a{min-height:44px;display:inline-flex;align-items:center;color:var(--accent);text-underline-offset:5px}
+.research-subnav a[aria-current=page]{font-weight:700;text-decoration-thickness:2px}
+.research-hero{padding-top:48px;padding-bottom:40px}
+.research-hero h1{max-width:1040px;font-size:clamp(37px,4.1vw,62px);line-height:1.14}
+.research-hero .hero-intro{max-width:820px}
+.research-label{font-size:16px;line-height:1.5;color:var(--accent);font-weight:600;margin-top:22px;max-width:870px}
+.research-status{background:var(--tint);border:1px solid var(--line);border-left:4px solid var(--accent);padding:22px 26px;border-radius:8px;max-width:1040px}
+.research-status p+p{margin-top:10px}.research-status p{max-width:88ch;font-size:17px}
+.research-status .small-label{font-size:13px}
+.research-feature{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-top:36px;padding-bottom:36px}
+.research-feature h2{max-width:920px}.research-feature>p:not(.eyebrow){max-width:830px;margin-top:18px}
+.research-feature .button{margin-top:24px}.research-feature .text-link{margin-top:12px}
+.research-topics article{border-top:2px solid var(--accent);padding-top:20px}.research-topics h3{margin-bottom:15px;color:var(--accent)}
+.research-reading{padding-top:38px}.research-reading>h2{margin-top:42px}
+.research-intro h1{max-width:1020px;overflow-wrap:break-word}
+.research-hypothesis{background:var(--tint);padding:28px;border-radius:9px;margin:32px 0}
+.research-hypothesis h2{margin:12px 0 17px}.research-hypothesis .small-label{font-size:13px}
+.research-evidence{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:24px 0}
+.research-evidence section{border-top:2px solid var(--accent);padding-top:20px;min-width:0}
+.research-evidence h3{color:var(--accent);font-size:25px;margin-bottom:14px}
+.research-evidence p{font-size:18px}
+.research-citations{white-space:normal;font-size:.85em;font-weight:600;color:var(--accent)}
+.research-citations a{display:inline-block;padding:1px 3px;text-underline-offset:3px}
+.research-reference{border-top:1px solid var(--line);padding:30px 0;scroll-margin-top:24px}
+.research-reference h2{font-size:27px;margin:12px 0 17px;line-height:1.3;overflow-wrap:anywhere}
+.research-reference p{font-size:18px}.research-reference .small-label{font-size:13px}
+.research-reference .research-bibliography{font-size:16px;color:var(--muted)}
+.research-source-links{color:var(--accent);overflow-wrap:anywhere}
+.research-source-links a{display:inline-block;min-height:44px;padding:10px 0;text-underline-offset:4px}
+.research-reference-index{display:flex;flex-wrap:wrap;gap:4px 20px;margin:20px 0 30px;font-size:16px;color:var(--accent)}
+.research-reference-index a{display:inline-flex;align-items:center;min-height:44px;text-underline-offset:4px}
+.research-editorial{border-top:1px solid var(--line);margin-top:36px;padding-top:22px;padding-bottom:40px;color:var(--muted)}
+.research-editorial p{font-size:16px}.research-editorial a{color:var(--accent);text-underline-offset:3px}
+@media(max-width:780px){.research-hero{padding-top:28px;padding-bottom:30px}.research-hero h1{font-size:38px}.research-subnav{gap:2px 18px}.research-status{padding:19px}.research-evidence{grid-template-columns:1fr}.research-hypothesis{padding:22px}.research-intro h1{font-size:37px}.research-feature h2{font-size:32px}.research-reference h2{font-size:25px}.research-reading{padding-top:28px}}
+@media(max-width:380px){.research-hero h1,.research-intro h1{font-size:33px}.research-status{padding:16px}.research-subnav{font-size:15px}}
+@media print{.research-subnav,.research-reference-index{display:none}.research-hero{padding:0 0 20px}.research-hero h1{font-size:27pt}.research-label,.research-status p,.research-reference p,.research-editorial p{font-size:10pt}.research-status{background:white;border-color:#777;padding:12px}.research-hypothesis{background:white;border:1px solid #777;padding:12px}.research-reading{padding-top:20px}.research-evidence{display:block}.research-evidence section{margin-bottom:15px}.research-reference{break-inside:avoid}.research-reference h2{font-size:16pt}.research-source-links a::after{content:' — ' attr(href);font-size:8pt;overflow-wrap:anywhere}.research-source-links a{min-height:0}.research-editorial{padding-bottom:0}}
