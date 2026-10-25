@@ -42,6 +42,12 @@ remains explicitly exploratory and separate from this family memorial.
   Lindenwood Cemetery (Fort Wayne), and Pleasant Grove Mission Fund
   (Warsaw) as a memorial-contribution option. Those announced plans
   do not independently establish that burial took place there.
+- **Additional family identification (October 25, 2026):** The founder
+  identifies the other daughter mentioned, but not named, in *The Star
+  Press* as **Barbara Boggs McMunn**, Maxine's daughter and his aunt.
+  This is a founder-provided family statement, not independent verification
+  and not a name found in the contemporary newspaper item. Keep that
+  attribution explicit in the public biography.
 - **Date conflict requiring verification:** The article was printed on
   Wednesday, May 24, 2000, and describes death on "Monday", suggesting
   May 22, 2000. The archive screenshot's machine-generated index states
