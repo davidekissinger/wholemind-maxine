@@ -62,7 +62,11 @@ def run_checks(root=ROOT):
         check('The Star Press' in html and 'May 24, 2000' in html,
               mode + ': identified newspaper source missing')
         check('May 22, 2000' in html and 'May 29, 2000' in html,
-              mode + ': death-date discrepancy not disclosed')
+              mode + ': newspaper date or index discrepancy not disclosed')
+        check('a civil death record has not been reviewed' in html,
+              mode + ': reported date not distinguished from civil record')
+        check('Newspapers.com PDF' in html and 'not published on this website' in html,
+              mode + ': source PDF provenance and non-reproduction missing')
         check('https://www.newspapers.com/image/249162609/' in html,
               mode + ': primary newspaper archive link missing')
         check('The newspaper clipping is not reproduced' in html,
