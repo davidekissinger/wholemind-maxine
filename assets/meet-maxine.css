@@ -1,0 +1,18 @@
+/* Meet Maxine only. Shared navigation, themes, and other pages are unchanged. */
+.maxine-narrative-hero{display:block;max-width:840px;padding-top:54px;padding-bottom:32px;border-bottom:1px solid var(--line)}
+.maxine-narrative-hero .maxine-full-name{font-family:var(--sans);font-size:19px;color:var(--muted)}
+.maxine-narrative-hero .hero-intro{font-family:var(--serif);font-size:clamp(26px,3.5vw,33px);line-height:1.35;max-width:none}
+.maxine-narrative-hero .story-credit{margin-top:24px;font-size:15px;font-weight:500}
+.maxine-narrative-relationship{display:block;color:var(--muted);font-size:14px;margin-top:3px}
+.maxine-narrative-story{padding-top:34px}
+.maxine-narrative-story>p{line-height:1.75;margin-bottom:21px}
+.maxine-narrative-story>p+p{margin-top:0}
+.maxine-narrative-story h2{color:var(--accent);margin-top:40px}
+.maxine-narrative-story .maxine-heritage-link{padding:16px 24px}
+.maxine-narrative-story .maxine-heritage-link .text-link{display:block;margin-top:0;min-height:0;line-height:1.6}
+.maxine-narrative-sources{border-bottom:1px solid var(--line);padding-bottom:12px}
+.maxine-narrative-sources summary{font-size:17px}
+.maxine-narrative-notes p{font-size:16px;line-height:1.65;margin-bottom:18px}
+.maxine-narrative-notes .editorial-note{font-size:14px}
+@media(max-width:780px){.maxine-narrative-hero{padding-top:28px;padding-bottom:28px}.maxine-narrative-story{padding-top:28px}.maxine-narrative-story .maxine-heritage-link{padding:16px 19px}}
+@media print{.maxine-narrative-hero{padding-top:20px}.maxine-narrative-story>p{font-size:12pt}.maxine-narrative-story .maxine-heritage-link{display:none}.maxine-narrative-story p{orphans:3;widows:3}.maxine-narrative-story h2{break-after:avoid}}

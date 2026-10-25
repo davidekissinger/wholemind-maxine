@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Meet Maxine review-page integration tests; not genealogical verification."""
+"""Meet Maxine integration checks; not genealogical or clinical verification."""
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -12,10 +12,12 @@ class Doc(HTMLParser):
         self.h1 = 0
         self.ids = []
         self.links = []
+        self.styles = []
         self.images = 0
         self.forms = 0
         self.robots = []
         self.canonicals = []
+        self.details = []
         self.feed(html)
 
     def handle_starttag(self, tag, attrs):
@@ -30,14 +32,19 @@ class Doc(HTMLParser):
             self.forms += 1
         if tag == 'a':
             self.links.append(a.get('href', ''))
+        if tag == 'details':
+            self.details.append(a)
         if tag == 'meta' and a.get('name') == 'robots':
             self.robots.append(a.get('content'))
         if tag == 'link' and a.get('rel') == 'canonical':
             self.canonicals.append(a.get('href'))
+        if tag == 'link' and a.get('rel') == 'stylesheet':
+            self.styles.append(a.get('href'))
 
 
 def run_checks(root=ROOT):
     checked = 0
+
     def check(value, message):
         nonlocal checked
         assert value, message
@@ -57,8 +64,22 @@ def run_checks(root=ROOT):
         check('noindex, nofollow' in doc.robots, mode + ': review indexing boundary removed')
         check('Meet Maxine' in html and 'Doris Maxine (Ratcliff) Boggs' in html,
               mode + ': missing memorial identity')
-        check('A verified family photograph may be added' in html,
-              mode + ': photograph placeholder missing')
+        check('To me, she was Grandma Boggs.' in html and
+              'By David E. Kissinger, BSHA, RN' in html and 'Her grandson' in html,
+              mode + ': personal opening or byline missing')
+        check('In December 1999' in html and 'I slept in his recliner.' in html and
+              'first with his hand and then with her brush' in html,
+              mode + ': approved Grace Village recollection missing')
+        check('This is one memory of Grandma' in html and 'It isn’t her whole story.' in html,
+              mode + ': partial-life-story qualification missing')
+        check('Why I started The Maxine Project' in html and
+              'It’s still early.' in html, mode + ': first-person purpose or stage missing')
+        check('maxine-portrait-placeholder' not in html and
+              'What her name asks us to remember' not in html,
+              mode + ': impersonal placeholder or slogan reintroduced')
+        check('Am I Ready? A Nurse’s Journey Through Change' in html and
+              'not a clinical record or a quotation from Maxine' in html,
+              mode + ': memoir provenance missing')
         check('The Star Press' in html and 'May 24, 2000' in html,
               mode + ': identified newspaper source missing')
         check('May 22, 2000' in html and 'May 29, 2000' in html,
@@ -80,16 +101,33 @@ def run_checks(root=ROOT):
               mode + ': family provenance distinction missing')
         check('It is <strong>his</strong> obituary, not hers.' in html,
               mode + ': Asbury source provenance missing')
+        check('verification and permission to publish' in html,
+              mode + ': photograph permission boundary missing')
+        check(all(anchor in doc.ids for anchor in ('her-story', 'sources', 'obituary')),
+              mode + ': existing story or source anchor lost')
+        notes = [a for a in doc.details if a.get('id') == 'sources']
+        check(len(notes) == 1 and 'open' not in notes[0],
+              mode + ': source notes must be collapsed by default')
+        check(html.index('In December 1999') < html.index('Why I started') <
+              html.index('id="sources"') < html.index('The newspaper notice:'),
+              mode + ': narrative must precede historical notes')
+        check('assets/meet-maxine.css' in doc.styles and
+              (base / 'maxine/assets/meet-maxine.css').is_file(),
+              mode + ': page-specific stylesheet missing')
         check('https://themaxineproject.org/meet-maxine.html' in doc.canonicals,
               mode + ': canonical address wrong')
-        check('href="family-account.html"' in html, mode + ': dedicated family-account link missing')
-        check('href="research/"' in html, mode + ': research link missing')
+        for href in ('family-account.html', 'resources.html', 'research/'):
+            check(href in doc.links, mode + ': missing link ' + href)
         maxine_home = (base / 'maxine' / 'index.html').read_text(encoding='utf-8')
         wholemind_home = (base / 'wholemind' / 'index.html').read_text(encoding='utf-8')
+        account = (base / 'maxine' / 'family-account.html').read_text(encoding='utf-8')
         check('href="meet-maxine.html"' in maxine_home,
               mode + ': memorial homepage entry missing')
         check('href="meet-maxine.html"' not in wholemind_home,
               mode + ': wrong brand navigation')
+        check('assets/meet-maxine.css' not in wholemind_home and
+              'assets/meet-maxine.css' not in account,
+              mode + ': narrative styles leaked to another page')
     return checked
 
 
