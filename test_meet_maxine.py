@@ -82,7 +82,7 @@ def run_checks(root=ROOT):
               mode + ': Asbury source provenance missing')
         check('https://themaxineproject.org/meet-maxine.html' in doc.canonicals,
               mode + ': canonical address wrong')
-        check('href="story.html#family-story"' in html, mode + ': family link missing')
+        check('href="family-account.html"' in html, mode + ': dedicated family-account link missing')
         check('href="research/"' in html, mode + ': research link missing')
         maxine_home = (base / 'maxine' / 'index.html').read_text(encoding='utf-8')
         wholemind_home = (base / 'wholemind' / 'index.html').read_text(encoding='utf-8')
