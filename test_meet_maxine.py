@@ -69,6 +69,11 @@ def run_checks(root=ROOT):
               mode + ': newspaper reproduction boundary missing')
         check('Carol Van Pelt' in html and 'Grace Village' in html,
               mode + ': sourced biographical details missing')
+        check('Barbara Boggs McMunn' in html,
+              mode + ': family-identified second daughter missing')
+        check('The newspaper itself did not name Barbara' in html and
+              'his family account, not from the published newspaper notice' in html,
+              mode + ': family provenance distinction missing')
         check('It is <strong>his</strong> obituary, not hers.' in html,
               mode + ': Asbury source provenance missing')
         check('https://themaxineproject.org/meet-maxine.html' in doc.canonicals,
