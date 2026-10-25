@@ -63,7 +63,7 @@ def run_checks(root=ROOT):
               mode + ': author and minister identifiers are absent')
         check('The Family Account:' in html and "I'll Move Over" in html,
               mode + ': Family Account title is missing')
-        check('A partner' in html and 'Carrying the legacy forward' in html.lower().replace('carrying the legacy forward','Carrying the legacy forward'),
+        check('id="partner-witness"' in html and 'id="carrying-forward"' in html,
               mode + ': narrative sections are missing')
         check('9780964888029' in html and '9780964888012' in html,
               mode + ': ISBN source distinction has been lost')
