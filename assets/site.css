@@ -128,3 +128,14 @@ body[data-brand="maxine"] .section-nav{flex-wrap:wrap;justify-content:flex-end;c
 @media(max-width:930px){.maxine-memorial-hero{gap:30px;grid-template-columns:1.1fr .9fr}.maxine-portrait-placeholder{min-height:390px}.maxine-next{align-items:flex-start;flex-direction:column}}
 @media(max-width:780px){.maxine-memorial-hero{grid-template-columns:1fr;padding-top:16px;padding-bottom:43px}.maxine-memorial-hero h1{font-size:clamp(45px,9vw,64px)}.maxine-portrait-placeholder{min-height:320px}.maxine-portrait-initial{font-size:200px}.maxine-memorial-principle{padding:38px 0}.maxine-memorial-principle p:last-child{font-size:19px}.maxine-tribute{padding-top:38px;padding-bottom:35px}.maxine-heritage-link{padding:19px}.maxine-next-links{width:100%}body[data-brand="maxine"] .section-nav{justify-content:flex-start}}
 @media print{.maxine-memorial-hero{display:block;padding:0 0 24px}.maxine-portrait-placeholder{display:none}.maxine-memorial-principle{padding:22px 0}.maxine-memorial-principle,.maxine-heritage-link{background:white!important}.maxine-next{display:none}}
+
+
+/* Family Account: preserve Meet Maxine's type, palette, and visual rhythm. */
+.maxine-family-hero h1{font-size:clamp(43px,4.4vw,72px);max-width:720px}
+.maxine-family-book .maxine-portrait-name{font-size:clamp(30px,3vw,41px);max-width:92%;overflow-wrap:break-word}
+.maxine-family-book .maxine-portrait-caption{color:var(--accent)}
+.maxine-family-book .maxine-portrait-note{max-width:265px}
+@media(max-width:780px){
+  .maxine-family-hero h1{font-size:clamp(39px,8.3vw,56px)}
+  .maxine-family-book .maxine-portrait-name{font-size:34px}
+}
