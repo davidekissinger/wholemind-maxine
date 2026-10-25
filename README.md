@@ -49,6 +49,7 @@ SITE_BRAND=maxine python3 build.py --deploy
 ## Source map
 
 - `src/content.py`: both brands' copy, resource contents, and source references.
+- `src/meet_maxine.py`: The Maxine Project's dedicated, source-labeled memorial page (original obituary and family photo pending verification).
 - `build.py`: shared page templates, headers, navigation, and build selection.
 - `assets/site.css`: shared responsive layout, light/dark palettes, and light-only print styles.
 - `assets/appearance-init.js`: appearance preference and first-paint initialization.
@@ -62,7 +63,7 @@ The Netlify build reads PDF files from this repository. It does not regenerate P
 
 ## Release boundaries
 
-The review banner and `noindex` remain enabled. This migration does **not** approve final legal status, change operator disclosures, activate donations or paid products, or remove the content-review requirement. `LAUNCH_MODE=public` changes the banner and indexing only, not legal facts or access controls; use it only after approval. A review banner is not password protection.
+The Maxine Project's `meet-maxine.html` is an editable memorial first edition; see `docs/meet-maxine-editorial.md` for provenance, obituary-search status, and image permissions. The review banner and `noindex` remain enabled. This migration does **not** approve final legal status, change operator disclosures, activate donations or paid products, or remove the content-review requirement. `LAUNCH_MODE=public` changes the banner and indexing only, not legal facts or access controls; use it only after approval. A review banner is not password protection.
 
 Worksheet responses stay in the page and are not sent to a server or saved by application code. Only the appearance preference is saved when browser storage is available. Brand-switching links pass the appearance choice to the other domain. Printing remains light. Google Fonts is a third-party request as disclosed in the privacy page.
 

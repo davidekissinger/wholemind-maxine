@@ -10,6 +10,7 @@ ROOT=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT/'src'))
 from content import BRANDS, RESOURCES, SOURCES, DATE, SCOPE, RELATIONSHIP
 from family_story import family_story
+from meet_maxine import meet_maxine_page
 from research import RESEARCH_PAGES, research_page, home_feature, founder_section
 E=html.escape
 REVIEW=not ('--public' in sys.argv or os.environ.get('LAUNCH_MODE') == 'public')
@@ -42,7 +43,9 @@ def header(b, prefix, sibling, active):
  appearance='<fieldset class="appearance" data-appearance hidden aria-describedby="appearance-help"><legend class="visually-hidden">Appearance</legend><span class="appearance-label" aria-hidden="true">Appearance</span><div class="appearance-options">'+''.join('<div class="appearance-option"><input type="radio" name="appearance" id="appearance-'+mode+'" value="'+mode+'"'+(' checked' if mode=='auto' else '')+'><label for="appearance-'+mode+'">'+label+'</label></div>' for mode,label in [('auto','Auto'),('light','Light'),('dark','Dark')])+'</div><span id="appearance-help" class="visually-hidden">Auto follows your device. Your selection is remembered in this browser when storage is available.</span></fieldset>'
  banner='<div class="preview-bar">FIRST RELEASE · Review version</div>' if REVIEW else ''
  nav_items=[('approach','Our approach'),('resources','Resources'),('story','Our story'),('connect','Connect')]
- if b=='maxine': nav_items.insert(2,('research','Research & Innovation'))
+ if b=='maxine':
+  nav_items.insert(2,('meet-maxine','Meet Maxine'))
+  nav_items.insert(3,('research','Research & Innovation'))
  nav=''.join('<a href="'+prefix+(path+'/' if path=='research' else path+'.html')+'"'+(' aria-current="page"' if active==path else '')+'>'+E(name)+'</a>' for path,name in nav_items)
  return '<a class="skip-link" href="#main">Skip to main content</a>'+banner+'<div class="switcher"><div class="wrap"><span class="switcher-label">Shared inspiration. Distinct purposes.</span><div class="switcher-actions"><nav class="tabs" aria-label="Choose a website">'+tab('wholemind',links['wholemind'])+tab('maxine',links['maxine'])+'</nav>'+appearance+'</div></div></div><header class="brand-header wrap"><a href="'+prefix+'index.html'+'" class="wordmark">'+c['name']+'</a><nav class="section-nav" aria-label="Main navigation">'+nav+'</nav></header>'
 
@@ -60,7 +63,7 @@ def page_intro(kicker,title,text):
 def home(b,sibling):
  c=BRANDS[b]
  future='<details class="future-note"><summary>What is being developed next?</summary><p>The Fuller Living Planner and the educational workshop <em>Making Room for a Fuller Life</em> are planned. Neither is available to purchase or book. This first release focuses on free resources.</p></details>' if b=='wholemind' else ''
- return '<div class="wrap hero"><div class="hero-copy"><p class="eyebrow">'+c['eyebrow']+'</p><h1>'+c['headline']+'</h1><p class="hero-intro">'+c['intro']+'</p><div class="actions"><a class="button primary" href="'+c['primary_url']+'">'+c['primary']+'</a><a class="text-link" href="'+('approach.html' if b=='wholemind' else 'story.html')+'">'+('Explore our approach' if b=='wholemind' else 'Meet the inspiration')+'</a></div><p class="domain">Free resources. No signup required.</p></div><aside class="hero-card"><div><p class="eyebrow">'+('Our starting point' if b=='wholemind' else 'The commitment')+'</p><h2>'+c['aside_title']+'</h2><p>'+c['aside_text']+'</p></div><p class="shared-signature">Dignity. Connection. Fuller living.</p></aside></div><section class="approach-band"><div class="wrap section"><div class="section-heading"><p class="eyebrow">Our approach</p><h2>'+c['approach_title']+'</h2><p>'+c['approach_intro']+'</p></div><div class="three-grid pillars">'+''.join('<article><h3>'+h+'</h3><p>'+t+'</p></article>' for h,t in c['pillars'])+'</div></div></section><section class="wrap section"><div class="section-heading"><p class="eyebrow">The first collection</p><h2>'+c['resource_title']+'</h2><p>'+c['resource_intro']+'</p></div><div class="three-grid">'+''.join(card(s) for s in c['resources'])+'</div>'+future+'</section><section class="story-band"><div class="wrap section story-grid"><div><p class="eyebrow">Inspired by Maxine Boggs</p><h2>'+c['story_title']+'</h2></div><div><p class="story-body">'+c['story_text']+'</p><p class="story-credit">Founder: David E. Kissinger, BSHA, RN</p><a class="text-link" href="story.html">Read our story <span aria-hidden="true">→</span></a></div></div></section>'+(home_feature() if b=='maxine' else '')+relation_panel(b,sibling)+connect(b)
+ return '<div class="wrap hero"><div class="hero-copy"><p class="eyebrow">'+c['eyebrow']+'</p><h1>'+c['headline']+'</h1><p class="hero-intro">'+c['intro']+'</p><div class="actions"><a class="button primary" href="'+c['primary_url']+'">'+c['primary']+'</a><a class="text-link" href="'+('approach.html' if b=='wholemind' else 'meet-maxine.html')+'">'+('Explore our approach' if b=='wholemind' else 'Meet the inspiration')+'</a></div><p class="domain">Free resources. No signup required.</p></div><aside class="hero-card"><div><p class="eyebrow">'+('Our starting point' if b=='wholemind' else 'The commitment')+'</p><h2>'+c['aside_title']+'</h2><p>'+c['aside_text']+'</p></div><p class="shared-signature">Dignity. Connection. Fuller living.</p></aside></div><section class="approach-band"><div class="wrap section"><div class="section-heading"><p class="eyebrow">Our approach</p><h2>'+c['approach_title']+'</h2><p>'+c['approach_intro']+'</p></div><div class="three-grid pillars">'+''.join('<article><h3>'+h+'</h3><p>'+t+'</p></article>' for h,t in c['pillars'])+'</div></div></section><section class="wrap section"><div class="section-heading"><p class="eyebrow">The first collection</p><h2>'+c['resource_title']+'</h2><p>'+c['resource_intro']+'</p></div><div class="three-grid">'+''.join(card(s) for s in c['resources'])+'</div>'+future+'</section><section class="story-band"><div class="wrap section story-grid"><div><p class="eyebrow">Inspired by Maxine Boggs</p><h2>'+c['story_title']+'</h2></div><div><p class="story-body">'+c['story_text']+'</p><p class="story-credit">Founder: David E. Kissinger, BSHA, RN</p><a class="text-link" href="story.html">Read our story <span aria-hidden="true">→</span></a></div></div></section>'+(home_feature() if b=='maxine' else '')+relation_panel(b,sibling)+connect(b)
 
 def content_page(b,kind,sibling):
  c=BRANDS[b]
@@ -68,6 +71,9 @@ def content_page(b,kind,sibling):
   return page_intro('Our approach',c['approach_title'],c['approach_intro'])+'<div class="wrap reading section"><h2>Our mission</h2><p>'+c['mission']+'</p><h2>Our vision</h2><p>'+c['vision']+'</p><h2>What the first release offers</h2><p>Free educational resources, practical reflection and preparation tools, and clearly identified links to outside information. You can read and print without creating an account.</p><h2>What it does not offer</h2><p>We do not provide diagnosis, treatment, individualized clinical advice, a staffed support line, or emergency response. No paid products, workshop bookings, or donations are accepted in this release.</p><a class="button primary" href="resources.html">Explore the resources</a></div>'
  if kind=='resources':
   return page_intro('Free to use',c['resource_title'],c['resource_intro'])+'<section class="wrap section"><div class="three-grid">'+''.join(card(s) for s in c['resources'])+'</div><p class="editorial-note">First edition · '+DATE+'. Source notes and scope are included with each guide. These are educational and reflection resources, not clinically validated instruments.</p></section>'
+ if kind=='meet-maxine':
+  if b!='maxine': raise ValueError('Meet Maxine belongs to The Maxine Project')
+  return meet_maxine_page()
  if kind=='story':
   return page_intro('In honor of Maxine Boggs',re.sub('<[^>]+>',' ',c['story_title']),c['story_text'])+'<div class="wrap reading section">'+paragraphs(c['story_detail'])+family_story(b,sibling)+'<h2>Dignity. Connection. Fuller living.</h2><p>These words describe the commitment behind the work. They guide what we make, how we write, and the experience we want people to have when they arrive here.</p><p>The founding inspiration is shared. The focus of each brand is distinct. Neither requires a person’s identity to be reduced to a diagnosis or a test result.</p><p class="story-credit">Founder: David E. Kissinger, BSHA, RN</p></div>'+relation_panel(b,sibling)
  if kind=='connect':
@@ -97,8 +103,8 @@ def resource_page(slug):
 def document(b,path,body,prefix,sibling):
  c=BRANDS[b]; kind='research' if path in RESEARCH_PAGES else path[:-5]
  slug=Path(path).stem
- title=RESEARCH_PAGES[path][0] if path in RESEARCH_PAGES else (RESOURCES[slug]['title'] if path.startswith('resources/') else {'index':c['name'],'approach':'Our approach','resources':'Free resources','story':'Our story','connect':'Connect','relationship':'Our relationship','privacy':'Privacy','accessibility':'Accessibility','404':'Page not found'}[kind])
- description=RESEARCH_PAGES[path][1] if path in RESEARCH_PAGES else RESOURCES[slug]['description'] if path.startswith('resources/') else c['intro']
+ title=RESEARCH_PAGES[path][0] if path in RESEARCH_PAGES else (RESOURCES[slug]['title'] if path.startswith('resources/') else {'index':c['name'],'approach':'Our approach','resources':'Free resources','story':'Our story','meet-maxine':'Meet Maxine · Doris Maxine (Ratcliff) Boggs','connect':'Connect','relationship':'Our relationship','privacy':'Privacy','accessibility':'Accessibility','404':'Page not found'}[kind])
+ description=RESEARCH_PAGES[path][1] if path in RESEARCH_PAGES else RESOURCES[slug]['description'] if path.startswith('resources/') else 'Meet Doris Maxine (Ratcliff) Boggs, the woman and grandmother whose life inspired The Maxine Project.' if path=='meet-maxine.html' else c['intro']
  canonical=ORIGINS[b]+'/'+(path[:-10] if path.endswith('index.html') else path)
  robots='noindex, nofollow' if REVIEW or path=='404.html' else 'index, follow'
  font='<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet">'
@@ -122,7 +128,9 @@ def build():
     if not pdf.is_file(): raise FileNotFoundError('Required resource PDF missing: '+str(pdf))
     shutil.copy2(pdf,target/'downloads'/pdf.name)
    paths=['index.html']+[p+'.html' for p in ('approach','resources','story','connect','relationship','privacy','accessibility','404')]+['resources/'+s+'.html' for s in c['resources']]
-   if b=='maxine': paths.extend(RESEARCH_PAGES)
+   if b=='maxine':
+    paths.append('meet-maxine.html')
+    paths.extend(RESEARCH_PAGES)
    for path in paths:
     sub=path.startswith('resources/');depth=len(Path(path).parts)-1;prefix='../'*depth
     other='maxine' if b=='wholemind' else 'wholemind'
