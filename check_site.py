@@ -36,7 +36,7 @@ def main():
     for brand in ('wholemind', 'maxine'):
         root = ROOT / 'dist' / brand
         paths = sorted(root.rglob('*.html'))
-        expected_pages = 15 if brand == 'maxine' else 12
+        expected_pages = 16 if brand == 'maxine' else 12
         assert len(paths) == expected_pages, f'{brand}: expected {expected_pages} pages, found {len(paths)}'
         for path in paths:
             page = Page(path.read_text(encoding='utf-8'))
@@ -87,7 +87,9 @@ def main():
             assert (selected_root / relative).read_bytes() == (publish / relative).read_bytes(), relative
     from test_research import run_checks
     research_checks = run_checks(ROOT)
-    print(f'PASS: {research_checks} research integrity checks.')
+    from test_meet_maxine import run_checks as memorial_checks_run
+    memorial_checks = memorial_checks_run(ROOT)
+    print(f'PASS: {research_checks} research integrity checks, {memorial_checks} memorial integrity checks.')
     print(f'PASS: {len(pages)} pages, {checked} internal references, six unchanged PDFs, and publish integrity.')
 
 if __name__ == '__main__':
