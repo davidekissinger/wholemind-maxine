@@ -9,10 +9,13 @@ from html import escape
 
 from family_story import BIOGRAPHY_URL, BOOK_RECORD_URL, ALTERNATE_RECORD_URL
 
+ATS_DEGREE_HISTORY_URL = 'https://www.ats.edu/files/galleries/coa-history.pdf'
+
 
 def family_account_page() -> str:
     """Build the editorial page without collecting or transmitting user data."""
     alumni = escape(BIOGRAPHY_URL, quote=True)
+    degree_history = escape(ATS_DEGREE_HISTORY_URL, quote=True)
     paperback = escape(BOOK_RECORD_URL, quote=True)
     hardcover = escape(ALTERNATE_RECORD_URL, quote=True)
 
@@ -21,7 +24,8 @@ def family_account_page() -> str:
   <div class="maxine-memorial-intro">
     <p class="eyebrow">Our story / The family account</p>
     <h1 id="family-account-heading">The Family Account:<br><em>I'll Move Over.</em></h1>
-    <p class="maxine-full-name">Rev. John Robert Boggs Jr.</p>
+    <p class="maxine-full-name">Rev. John Robert Boggs Jr., BD (1949)</p>
+    <p class="editorial-note">Bachelor of Divinity · Asbury Theological Seminary</p>
     <p class="hero-intro">The story of a family does not stop at a diagnosis. It continues in the everyday choices to adapt, care, and remain connected through change.</p>
     <div class="actions">
       <a class="button primary" href="#partner-witness">Read the account</a>
@@ -49,7 +53,7 @@ def family_account_page() -> str:
   <h2 id="partner-witness">A partner's witness</h2>
   <p>Rev. John Robert Boggs Jr. married Maxine Ratcliff on July 10, 1943. They were married for nearly 57 years before her death in May 2000. For the family, their story is about the life they shared as well as the demands that Alzheimer's disease brought into it.</p>
   <p>According to his grandson David E. Kissinger's family account, Rev. Boggs cared for Maxine for more than two decades. The experience became part of the history he sought to preserve in <cite>I'll Move Over</cite>, published under the name J. Robert Boggs.</p>
-  <p>His life and work also extended far beyond the caregiving role. An Asbury Theological Seminary alumni obituary records his service as a United Methodist minister beginning in 1944, his retirement in 1992, ministry in Ohio, North Dakota, and Indiana, and his establishment of a soup kitchen in Elkhart, Indiana.</p>
+  <p>His life and work also extended far beyond the caregiving role. Asbury Theological Seminary's alumni memorial lists him as a Bachelor of Divinity (BD) graduate in 1949 and records his service as a United Methodist minister beginning in 1944, his retirement in 1992, ministry in Ohio, North Dakota, and Indiana, and his establishment of a soup kitchen in Elkhart, Indiana.</p>
 
   <h2 id="the-book">The book in the family</h2>
   <p>For this project, <cite>I'll Move Over</cite> is a personal family account and an important historical touchstone. It is not presented as a medical guide, a clinical study, or a substitute for current healthcare information.</p>
@@ -66,7 +70,8 @@ def family_account_page() -> str:
   </div>
 
   <h2 id="historical-records">Historical records &amp; context</h2>
-  <p><strong>Ministry and family:</strong> An <a href="{alumni}" rel="noreferrer">Asbury Theological Seminary alumni memorial <span class="external">(external)</span></a> documents Rev. Boggs's ministry, his marriage to Maxine, and their family. It does not independently document how many years he provided care or the contents of his book.</p>
+  <p><strong>Education and ministry:</strong> An <a href="{alumni}" rel="noreferrer">Asbury Theological Seminary alumni memorial <span class="external">(external)</span></a> lists Rev. John Robert Boggs Jr. as <strong>1949, BD</strong>, and documents his ministry, his marriage to Maxine, and their family. It does not independently document how many years he provided care or the contents of his book.</p>
+  <p><strong>About the degree:</strong> BD means <strong>Bachelor of Divinity</strong>. Despite the name, it was historically a graduate-level professional theological degree, the predecessor in American seminary education of the Master of Divinity (MDiv). This page preserves the degree Rev. Boggs earned in 1949 rather than suggesting that he was later awarded an MDiv. See the <a href="{degree_history}" rel="noreferrer">Association of Theological Schools' historical account <span class="external">(external)</span></a> for the later change in degree terminology.</p>
   <p><strong>Book records:</strong> A <a href="{hardcover}" rel="noreferrer">hardcover bookseller listing <span class="external">(external)</span></a> identifies <cite>I'll Move Over: The Story of a Great Love</cite> (ISBN 9780964888029). A <a href="{paperback}" rel="noreferrer">separate listing <span class="external">(external)</span></a> identifies ISBN 9780964888012 under a different extended title. These are bibliographic leads, not an examination of the book or proof about the relationship between the listed versions.</p>
   <details class="future-note maxine-archive" id="editorial-record">
     <summary>About the family account and source boundaries</summary>

@@ -60,6 +60,8 @@ class FamilyStoryTests(unittest.TestCase):
                          'supplied by founder David E. Kissinger', 'no current affiliation'):
             self.assertIn(expected, text)
         self.assertIn('alumni.asburyseminary.edu', text)
+        self.assertIn('Rev. John Robert Boggs Jr., BD (1949)', text)
+        self.assertIn('Bachelor of Divinity (BD), 1949', text)
         self.assertNotIn('<blockquote', text)
         self.assertNotIn('January 1, 1994', text)
 

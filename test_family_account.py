@@ -61,6 +61,14 @@ def run_checks(root=ROOT):
               mode + ': family design does not match the Maxine memorial')
         check('Rev. John Robert Boggs Jr.' in html and 'J. Robert Boggs' in html,
               mode + ': author and minister identifiers are absent')
+        check('Rev. John Robert Boggs Jr., BD (1949)' in html,
+              mode + ': historical Asbury credential missing from hero')
+        check('Bachelor of Divinity · Asbury Theological Seminary' in html,
+              mode + ': degree expansion or institution missing')
+        check('1949, BD' in html and 'Association of Theological Schools' in html,
+              mode + ': degree source or historical context missing')
+        check('rather than suggesting that he was later awarded an MDiv' in html,
+              mode + ': prohibited retroactive degree conversion missing')
         check('The Family Account:' in html and "I'll Move Over" in html,
               mode + ': Family Account title is missing')
         check('id="partner-witness"' in html and 'id="carrying-forward"' in html,
