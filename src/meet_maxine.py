@@ -1,18 +1,22 @@
 """Memorial page for Doris Maxine (Ratcliff) Boggs.
 
-The original obituary and family portrait are not yet available for reproduction.
-Only founder-provided family history and appropriately labeled external records
-appear in this review version. Keep memorial claims distinct from research.
+A short 2000 newspaper death notice has now been located, but the clipping itself
+is not reproduced. It is paraphrased and attributed to the original newspaper
+page. Automated archive metadata conflicts with the article chronology; do not
+assert an independently unverified exact date of death. Family portraits remain
+pending permission. Keep memorial claims distinct from research.
 """
 from html import escape as E
 
 ASBURY = 'https://alumni.asburyseminary.edu/elink/alumni-obituaries-august-2013/'
 ROOTSWEB_SEARCH = 'https://obituaries.rootsweb.com/obits/searchObits?simplesearch=true&fullsearch=Doris+maxine+boggs%2C+Winona+Lake%2C+I'
+STAR_PRESS_NOTICE = 'https://www.newspapers.com/image/249162609/?article=ed5496d8-c4f4-44a1-9eb9-58d58e52e0aa'
 
 
 def meet_maxine_page() -> str:
     asbury = E(ASBURY, quote=True)
     rootsweb = E(ROOTSWEB_SEARCH, quote=True)
+    newspaper = E(STAR_PRESS_NOTICE, quote=True)
     return (
         '<section class="wrap maxine-memorial-hero" aria-labelledby="meet-maxine-heading">'
         '<div class="maxine-memorial-intro">'
@@ -41,10 +45,14 @@ def meet_maxine_page() -> str:
         '<article class="wrap reading section maxine-tribute" id="her-story">'
         '<p class="eyebrow">Her life. Our beginning.</p>'
         '<h2>Who was Maxine?</h2>'
-        '<p>Maxine was a wife, mother, and grandmother. She was married to Rev. John Robert Boggs Jr. '
-        'on July 10, 1943; they later made their home in Winona Lake, Indiana. '
-        'Those details belong to her life story, but neither a record of dates nor a medical diagnosis '
-        'can tell the whole story of a person.</p>'
+        '<p>Maxine was a wife, mother, and grandmother. She married Rev. John Robert Boggs Jr. '
+        'on July 10, 1943; they later made their home in Winona Lake, Indiana.</p>'
+        '<p>A brief newspaper notice published in May 2000 described Maxine as a homemaker. '
+        'It named her daughter Carol Van Pelt of Redkey, Indiana, and recorded a family that '
+        'included another daughter, two sisters, and six grandchildren. Her husband of nearly '
+        '57 years, John Robert Boggs Jr., survived her. The notice did not name the other daughter.</p>'
+        '<p>These glimpses belong to her life story, but neither a record of dates nor a medical '
+        'diagnosis can tell the whole story of a person.</p>'
         '<p>For her grandson, David E. Kissinger, Maxine is the personal reason this initiative bears her name. '
         'The family’s experience with Alzheimer’s disease informs the work, but the purpose is broader: '
         'to keep people visible in the midst of cognitive change and to support the families who care about them.</p>'
@@ -65,12 +73,24 @@ def meet_maxine_page() -> str:
         'The project’s work may evolve; its reason for beginning does not.</p>'
         '<details class="future-note maxine-archive" id="obituary">'
         '<summary>Obituary and historical records</summary>'
-        '<p><strong>Original obituary:</strong> The full text of Maxine’s obituary has not yet been recovered '
-        'and authenticated for publication here. We will not substitute invented biographical details or '
-        'present a search result as an obituary.</p>'
-        '<p><a href="' + rootsweb + '" rel="noreferrer">RootsWeb obituary search for Doris Maxine Boggs '
-        '<span class="external">(external search; availability may vary)</span></a>. '
-        'This is the search supplied for the archive, not a verified obituary text.</p>'
+        '<p><strong>Newspaper death notice:</strong> A short item titled <cite>Mother dies</cite> '
+        'appeared in <cite>The Star Press</cite> (Muncie, Indiana) on Wednesday, May 24, 2000, '
+        'page 8. It reported that Maxine died at age 78 at Grace Village Retirement Community '
+        'in Winona Lake. The notice named family members and identified Pleasant Grove Mission '
+        'Fund in Warsaw as a suggested recipient of memorial contributions.</p>'
+        '<p><a href="' + newspaper + '" rel="noreferrer">View the archived newspaper page '
+        '<span class="external">(external; access may require a subscription)</span></a>. '
+        'The newspaper clipping is not reproduced on this website.</p>'
+        '<p><strong>A date discrepancy:</strong> The May 24 notice says she died the preceding '
+        'Monday, which indicates May 22, 2000. The newspaper archive’s automated index lists '
+        'May 29, 2000, a date after the article’s publication. The exact date should be '
+        'independently confirmed before it is treated as established.</p>'
+        '<p><strong>Memorial arrangements:</strong> The notice listed a service at Grace Village '
+        'Chapel and plans for private graveside services at Lindenwood Cemetery in Fort Wayne. '
+        'These were announced arrangements, not independently verified records of burial.</p>'
+        '<p>The earlier <a href="' + rootsweb + '" rel="noreferrer">RootsWeb search '
+        '<span class="external">(external)</span></a> remains a research lead, not a substitute '
+        'for this identified newspaper notice.</p>'
         '<p><strong>Family photographs:</strong> No archival image is reproduced in this edition. '
         'The typographic tribute at the top of this page will remain until an appropriate photograph '
         'and permission to publish it are confirmed.</p>'
@@ -83,10 +103,18 @@ def meet_maxine_page() -> str:
         '<span class="external">(external)</span></a> for Rev. John Robert Boggs Jr. independently '
         'records his marriage to Maxine Ratcliff on July 10, 1943, their residence in Winona Lake, '
         'and her death in May 2000. It is <strong>his</strong> obituary, not hers.</p>'
-        '<p class="editorial-note">First memorial edition · October 25, 2026. '
-        'This is original editorial text, not a quotation from Maxine, a newspaper obituary, '
-        'or <cite>I’ll Move Over</cite>. Family memories, the original obituary, and photographs '
-        'may be incorporated following verification and source review.</p>'
+        '<p><strong>Newspaper source:</strong> <cite>The Star Press</cite>, Muncie, Indiana, '
+        'May 24, 2000, page 8, <cite>Mother dies</cite>. This archival '
+        '<a href="' + newspaper + '" rel="noreferrer">newspaper record '
+        '<span class="external">(external)</span></a> was identified from a founder-supplied '
+        'screenshot. Details here are paraphrased, not a transcription of the published notice. '
+        'The article and the archive’s auto-generated death date conflict; further confirmation '
+        'would be required to publish a definitive exact date.</p>'
+        '<p class="editorial-note">Memorial archive update · October 25, 2026. '
+        'This is original editorial text based on identified records, not a quotation from Maxine '
+        'or a reproduction of the newspaper notice or <cite>I’ll Move Over</cite>. '
+        'Family memories and photographs may be incorporated following verification '
+        'and permission review.</p>'
         '</div></article>'
         '<section class="wrap section maxine-next"><div>'
         '<p class="eyebrow">A story that continues</p>'

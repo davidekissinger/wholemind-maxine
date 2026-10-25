@@ -29,11 +29,39 @@ remains explicitly exploratory and separate from this family memorial.
   This is a *search URL*, not the obituary itself. It could not be retrieved
   for this edition; do not imply it authenticated or supplied original text.
 
+- **New contemporary newspaper source (added October 25, 2026):** A
+  founder-supplied screenshot captures the short item **“Mother dies,”
+  The Star Press (Muncie, Indiana), Wednesday, May 24, 2000, p. 8**:
+  https://www.newspapers.com/image/249162609/?article=ed5496d8-c4f4-44a1-9eb9-58d58e52e0aa
+  The item describes Doris Maxine Boggs, age 78, as a homemaker; reports
+  that she died at Grace Village Retirement Community, Winona Lake;
+  identifies John Robert Boggs Jr. as her husband of 57 years, names
+  daughter Carol Van Pelt of Redkey, and also notes another unnamed
+  daughter, two sisters, and six grandchildren. The short death notice
+  listed services at Grace Village Chapel, planned graveside services at
+  Lindenwood Cemetery (Fort Wayne), and Pleasant Grove Mission Fund
+  (Warsaw) as a memorial-contribution option. Those announced plans
+  do not independently establish that burial took place there.
+- **Date conflict requiring verification:** The article was printed on
+  Wednesday, May 24, 2000, and describes death on "Monday", suggesting
+  May 22, 2000. The archive screenshot's machine-generated index states
+  May 29, 2000, which postdates publication and cannot be correct for
+  this notice. The public page explains the inconsistency and does not
+  represent a precise death date as independently verified. An official
+  death record or second contemporary source would resolve this.
+- **Copyright/access boundary:** The clipping is viewed in a screenshot
+  supplied by the founder. We paraphrase factual information, link to the
+  original publisher/archive, and do **not** upload or reproduce the
+  newspaper image or its article text. Access to the linked archive may
+  require an account or subscription.
+
 ## Editorial boundaries
 
-- No Maxine obituary text, quotation, family photo, book passage or cover
-  is recreated, quoted or implied to be licensed. The memorial portrait is
-  an original typographic monogram, with an accurate photograph placeholder.
+- The identified newspaper death notice is summarized and attributed,
+  but neither its photograph/clipping nor its full wording is reproduced.
+  No family photo, book passage or cover is recreated or implied licensed.
+  The memorial portrait remains an original typographic monogram, with
+  an accurate photograph placeholder.
 - No unverified birth date, birthplace, exact date of death, hobbies,
   personality descriptions or attributed words are inserted.
 - Source statements are plainly divided from founder account.
@@ -53,6 +81,8 @@ remains explicitly exploratory and separate from this family memorial.
 
 ## Future verified amendments
 
-Original obituary text and publication metadata; family photo with
-publication permission and descriptive alt text; firsthand memories
-approved by the family; exact life dates if supported by a reliable record.
+Any longer obituary or independent death record that can resolve the exact
+date of death; any reproduction rights to quote or display the original
+newspaper clipping; family photo with publication permission and descriptive
+alt text; firsthand memories approved by the family; exact birth date or
+other life dates if supported by a reliable record.
