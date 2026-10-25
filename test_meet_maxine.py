@@ -59,8 +59,16 @@ def run_checks(root=ROOT):
               mode + ': missing memorial identity')
         check('A verified family photograph may be added' in html,
               mode + ': photograph placeholder missing')
-        check('full text of Maxine’s obituary has not yet been recovered' in html,
-              mode + ': obituary status inaccurately stated')
+        check('The Star Press' in html and 'May 24, 2000' in html,
+              mode + ': identified newspaper source missing')
+        check('May 22, 2000' in html and 'May 29, 2000' in html,
+              mode + ': death-date discrepancy not disclosed')
+        check('https://www.newspapers.com/image/249162609/' in html,
+              mode + ': primary newspaper archive link missing')
+        check('The newspaper clipping is not reproduced' in html,
+              mode + ': newspaper reproduction boundary missing')
+        check('Carol Van Pelt' in html and 'Grace Village' in html,
+              mode + ': sourced biographical details missing')
         check('It is <strong>his</strong> obituary, not hers.' in html,
               mode + ': Asbury source provenance missing')
         check('https://themaxineproject.org/meet-maxine.html' in doc.canonicals,
