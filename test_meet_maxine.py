@@ -70,6 +70,24 @@ def run_checks(root=ROOT):
         check('In December 1999' in html and 'I slept in his recliner.' in html and
               'first with his hand and then with her brush' in html,
               mode + ': approved Grace Village recollection missing')
+        # Preserve the approved family-review wording, not just the original story.
+        story = html.split('id="her-story"', 1)[1].split('<details', 1)[0]
+        check('I have come to appreciate the memories of those mornings more as I’ve grown older.' in story,
+              mode + ': family-review memory wording missing')
+        check('Grandma was only 57 when Alzheimer’s entered her life.' in story,
+              mode + ': approved onset-age wording changed')
+        check('July 10, 1943' not in story and 'July 10, 1943' in html,
+              mode + ': wedding date must remain in source notes, not the narrative')
+        check('she and Grandpa had been married for nearly 57 years.' in story,
+              mode + ': marriage duration missing')
+        check('helpful information about Alzheimer’s, answers to the questions that arise when caring for someone, and a clearer understanding of the research.' in story,
+              mode + ': family-review purpose wording missing')
+        check('understandable information about Alzheimer’s' not in story and
+              'help with the questions that come with caring for someone' not in story,
+              mode + ': superseded purpose wording restored')
+        check('That’s why her name is here.' not in html and
+              '<p>It’s still early. I’m beginning with our family’s story and building from there.</p>' in story,
+              mode + ': approved narrative ending changed')
         check('This is one memory of Grandma' in html and 'It isn’t her whole story.' in html,
               mode + ': partial-life-story qualification missing')
         check('Why I started The Maxine Project' in html and
