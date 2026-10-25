@@ -1,12 +1,9 @@
-"""Memorial page for Doris Maxine (Ratcliff) Boggs.
+"""Meet Maxine: founder-approved personal narrative and separate source notes.
 
-A 2026 Newspapers.com PDF export of the May 24, 2000 newspaper notice has
-been inspected. It reports Maxine's death the preceding Monday (May 22,
-2000). Attribute this as the newspaper-reported date, rather than a certified
-vital record; an automated archive index instead erroneously says May 29.
-Paraphrase the notice and link to the original archive, without hosting the
-copyrighted image or PDF. Family portraits remain pending permission.
-Keep memorial claims distinct from research.
+The Grace Village recollection is adapted from David E. Kissinger's memoir,
+not invented dialogue or a quotation from Maxine. Historical qualifications
+remain in an expandable section. No archival image or copyrighted clipping
+is reproduced. This module changes only The Maxine Project's memorial page.
 """
 from html import escape as E
 
@@ -19,122 +16,54 @@ def meet_maxine_page() -> str:
     asbury = E(ASBURY, quote=True)
     rootsweb = E(ROOTSWEB_SEARCH, quote=True)
     newspaper = E(STAR_PRESS_NOTICE, quote=True)
-    return (
-        '<section class="wrap maxine-memorial-hero" aria-labelledby="meet-maxine-heading">'
-        '<div class="maxine-memorial-intro">'
-        '<p class="eyebrow">Our story / The woman behind the name</p>'
-        '<h1 id="meet-maxine-heading">Meet <em>Maxine.</em></h1>'
-        '<p class="maxine-full-name">Doris Maxine (Ratcliff) Boggs</p>'
-        '<p class="hero-intro">Before there was a project, there was a grandmother, a family, '
-        'and a life that mattered far beyond the experience of Alzheimer’s disease.</p>'
-        '<div class="actions"><a class="button primary" href="#her-story">Read her story</a>'
-        '<a class="text-link" href="family-account.html">Explore the family account '
-        '<span aria-hidden="true">→</span></a></div>'
-        '</div>'
-        '<aside class="maxine-portrait-placeholder" aria-label="A typographic tribute, not a photograph of Maxine">'
-        '<span class="maxine-portrait-initial" aria-hidden="true">M</span>'
-        '<p class="maxine-portrait-name">Maxine</p>'
-        '<p class="maxine-portrait-caption">In honor of a life, not a diagnosis.</p>'
-        '<p class="maxine-portrait-note">A verified family photograph may be added in a future edition.</p>'
-        '</aside>'
-        '</section>'
-        '<section class="maxine-memorial-principle"><div class="wrap">'
-        '<p class="small-label">What her name asks us to remember</p>'
-        '<h2>The person comes first.</h2>'
-        '<p>A diagnosis may change what someone can do. It does not erase the life they have lived, '
-        'the relationships they hold, or the dignity they deserve.</p>'
-        '</div></section>'
-        '<article class="wrap reading section maxine-tribute" id="her-story">'
-        '<p class="eyebrow">Her life. Our beginning.</p>'
-        '<h2>Who was Maxine?</h2>'
-        '<p>Maxine was a wife, mother, and grandmother. She married Rev. John Robert Boggs Jr. '
-        'on July 10, 1943; they later made their home in Winona Lake, Indiana. '
-        'A contemporary newspaper notice reports that she died there on Monday, '
-        'May 22, 2000, at age 78.</p>'
-        '<p>A brief newspaper notice published in May 2000 described Maxine as a homemaker. '
-        'It named her daughter Carol Van Pelt of Redkey, Indiana, and mentioned another daughter. '
-        'According to the family account, that daughter was Barbara Boggs McMunn, the aunt of '
-        'Maxine’s grandson David E. Kissinger. The newspaper itself did not name Barbara. '
-        'The notice also recorded two sisters and six grandchildren. Her husband of nearly '
-        '57 years, John Robert Boggs Jr., survived her.</p>'
-        '<p>These glimpses belong to her life story, but neither a record of dates nor a medical '
-        'diagnosis can tell the whole story of a person.</p>'
-        '<p>For her grandson, David E. Kissinger, Maxine is the personal reason this initiative bears her name. '
-        'The family’s experience with Alzheimer’s disease informs the work, but the purpose is broader: '
-        'to keep people visible in the midst of cognitive change and to support the families who care about them.</p>'
-        '<h2>What her family carried forward</h2>'
-        '<p>Maxine’s husband wrote <cite>I’ll Move Over</cite>, an account of his family’s experience '
-        'with Alzheimer’s disease. His caregiving and the book are important parts of the family history. '
-        'The Maxine Project begins with Maxine herself rather than defining her through anyone else’s account.</p>'
-        '<p>That history now informs educational resources for families and independent questions for '
-        'scientific consideration. The project does not claim that a family experience is scientific evidence '
-        'or that a research treatment has been established.</p>'
-        '<div class="maxine-heritage-link"><p class="small-label">Continue the family story</p>'
-        '<p>Read about Rev. Boggs, his book, and the family history that helped shape the project.</p>'
-        '<a class="text-link" href="family-account.html">Read the family account '
-        '<span aria-hidden="true">→</span></a></div>'
-        '<h2>A living tribute</h2>'
-        '<p>The Maxine Project honors her through a simple commitment: see the person, listen to families, '
-        'share useful knowledge, and explore meaningful questions with care and scientific humility. '
-        'The project’s work may evolve; its reason for beginning does not.</p>'
-        '<details class="future-note maxine-archive" id="obituary">'
-        '<summary>Obituary and historical records</summary>'
-        '<p><strong>Newspaper death notice:</strong> A short item titled <cite>Mother dies</cite> '
-        'appeared in <cite>The Star Press</cite> (Muncie, Indiana) on Wednesday, May 24, 2000, '
-        'page 8. It reported that Maxine died at age 78 at Grace Village Retirement Community '
-        'in Winona Lake. The notice named family members and identified Pleasant Grove Mission '
-        'Fund in Warsaw as a suggested recipient of memorial contributions.</p>'
-        '<p><a href="' + newspaper + '" rel="noreferrer">View the archived newspaper page '
-        '<span class="external">(external; access may require a subscription)</span></a>. '
-        'The newspaper clipping is not reproduced on this website.</p>'
-        '<p><strong>Date of death:</strong> The May 24, 2000 newspaper notice states that '
-        'Maxine died on Monday, making May 22, 2000 the newspaper-reported date. '
-        'A separate automated newspaper-index entry gives May 29, 2000, which is '
-        'inconsistent with the notice’s publication date. The original notice takes '
-        'precedence here; a civil death record has not been reviewed.</p>'
-        '<p><strong>Memorial arrangements:</strong> The notice listed a service at Grace Village '
-        'Chapel and plans for private graveside services at Lindenwood Cemetery in Fort Wayne. '
-        'These were announced arrangements, not independently verified records of burial.</p>'
-        '<p>The earlier <a href="' + rootsweb + '" rel="noreferrer">RootsWeb search '
-        '<span class="external">(external)</span></a> remains a research lead, not a substitute '
-        'for this identified newspaper notice.</p>'
-        '<p><strong>Family photographs:</strong> No archival image is reproduced in this edition. '
-        'The typographic tribute at the top of this page will remain until an appropriate photograph '
-        'and permission to publish it are confirmed.</p>'
-        '</details>'
-        '<div class="maxine-source-notes" id="sources">'
-        '<h2>Sources and editorial notes</h2>'
-        '<p>Her name, her relationship to the founder, and the personal inspiration behind the project '
-        'come from the founder’s family account. '
-        'An <a href="' + asbury + '" rel="noreferrer">Asbury Theological Seminary alumni obituary '
-        '<span class="external">(external)</span></a> for Rev. John Robert Boggs Jr. independently '
-        'records his marriage to Maxine Ratcliff on July 10, 1943, their residence in Winona Lake, '
-        'and her death in May 2000. It is <strong>his</strong> obituary, not hers.</p>'
-        '<p><strong>Newspaper source:</strong> <cite>The Star Press</cite>, Muncie, Indiana, '
-        'May 24, 2000, page 8, <cite>Mother dies</cite>. This archival '
-        '<a href="' + newspaper + '" rel="noreferrer">newspaper record '
-        '<span class="external">(external)</span></a> was identified from a founder-supplied '
-        'screenshot and subsequently checked against a one-page Newspapers.com PDF '
-        'export downloaded October 25, 2026. Details are paraphrased, not a '
-        'transcription of the notice. The reported date of death is May 22, 2000; '
-        'the archive’s May 29 automated index conflicts with this primary text. '
-        'The newspaper PDF is retained as source material, not published on this website.</p>'
-        '<p><strong>Family identification:</strong> Founder David E. Kissinger identifies '
-        'Barbara Boggs McMunn as Maxine’s other daughter and his aunt. Her name is from '
-        'his family account, not from the published newspaper notice.</p>'
-        '<p class="editorial-note">Memorial archive update · October 25, 2026. '
-        'This is original editorial text based on identified records, not a quotation from Maxine '
-        'or a reproduction of the newspaper notice or <cite>I’ll Move Over</cite>. '
-        'Family memories and photographs may be incorporated following verification '
-        'and permission review.</p>'
-        '</div></article>'
-        '<section class="wrap section maxine-next"><div>'
-        '<p class="eyebrow">A story that continues</p>'
-        '<h2>Honoring her through what we do next.</h2>'
-        '<p>Explore thoughtful family resources, or learn about the early research questions '
-        'inspired by this mission.</p>'
-        '</div><div class="maxine-next-links">'
-        '<a class="button primary" href="resources.html">Family resources</a>'
-        '<a class="button secondary" href="research/">Research &amp; Innovation</a>'
-        '</div></section>'
-    )
+    # A stylesheet link is body-allowed HTML. Keep these overrides page-local
+    # so the companion brand and family-account layout are not changed.
+    return f'''<link rel="stylesheet" href="assets/meet-maxine.css">
+<section class="wrap maxine-memorial-hero maxine-narrative-hero" aria-labelledby="meet-maxine-heading">
+  <div class="maxine-memorial-intro">
+    <p class="eyebrow">The woman behind the name</p>
+    <h1 id="meet-maxine-heading">Meet <em>Maxine.</em></h1>
+    <p class="maxine-full-name">Doris Maxine (Ratcliff) Boggs</p>
+    <p class="hero-intro">To me, she was Grandma Boggs.</p>
+    <p class="story-credit">By David E. Kissinger, BSHA, RN <span class="maxine-narrative-relationship">Her grandson</span></p>
+  </div>
+</section>
+<article class="wrap reading section maxine-tribute maxine-narrative-story" id="her-story" aria-label="A grandson’s memory">
+  <p>In December 1999, I spent a few weeks with my grandfather at Grace Village in Winona Lake, Indiana. He had an apartment there, and Grandma was being cared for in the nursing home. I slept in his recliner. Each morning, after breakfast, we would go over to see her.</p>
+  <p>By then, Grandma was bedridden and no longer responding to us. Grandpa still greeted her every day. He would tell her what good care the nurses and staff were giving her.</p>
+  <p>Then he would gently move her soft white hair away from her face, first with his hand and then with her brush. He talked to her as he did it.</p>
+  <p>I watched him and could see how much he loved her. I have come to appreciate those mornings more as I’ve grown older.</p>
+  <h2>Grandma and Grandpa</h2>
+  <p>Grandma was only 57 when Alzheimer’s entered her life. She and Grandpa had married on July 10, 1943. By the time she died in May 2000, at 78, they had been married for nearly 57 years.</p>
+  <p>My grandfather, Rev. John Robert Boggs Jr., wrote about their experience in a book called <cite>I’ll Move Over</cite>. His account is part of our family’s history. Those mornings at Grace Village are part of mine.</p>
+  <p>This is one memory of Grandma, from late in her life. It isn’t her whole story. I want this page to grow as our family brings together more of our memories and photographs, including the years before Alzheimer’s.</p>
+  <h2>Why I started The Maxine Project</h2>
+  <p>I’m a nurse, but my connection to Alzheimer’s began in my own family. When I think about what families need, I think about Grandma and Grandpa, too.</p>
+  <p>I started this project to remember her and to work toward something useful for other families. I want it to become a place where people can find understandable information about Alzheimer’s, help with the questions that come with caring for someone, and a clearer understanding of the research.</p>
+  <p>It’s still early. I’m beginning with our family’s story and building from there.</p>
+  <p>That’s why her name is here.</p>
+  <div class="maxine-heritage-link">
+    <a class="text-link" href="family-account.html">Read about Grandpa and <cite>I’ll Move Over</cite> <span aria-hidden="true">→</span></a>
+  </div>
+  <details class="future-note maxine-archive maxine-narrative-sources" id="sources">
+    <summary>Family memories and historical sources</summary>
+    <div id="obituary" class="maxine-narrative-notes">
+      <p><strong>The personal memory:</strong> The Grace Village passage is adapted from David E. Kissinger’s own recollections of December 1999, recorded in his memoir manuscript <cite>Am I Ready? A Nurse’s Journey Through Change</cite>. The age of 57 at the onset of Alzheimer’s is also from his family account. This is a grandson’s recollection, not a clinical record or a quotation from Maxine.</p>
+      <p><strong>Marriage and family history:</strong> An <a href="{asbury}" rel="noreferrer">Asbury Theological Seminary alumni obituary <span class="external">(external)</span></a> for Rev. John Robert Boggs Jr. records his marriage to Maxine Ratcliff on July 10, 1943, their residence in Winona Lake, and her death in May 2000. It is <strong>his</strong> obituary, not hers.</p>
+      <p><strong>The newspaper notice:</strong> A short item titled <cite>Mother dies</cite> appeared in <cite>The Star Press</cite>, Muncie, Indiana, on May 24, 2000, page 8. It reported that Maxine died at age 78 at Grace Village Retirement Community. The notice says she died on Monday, corresponding to May 22, 2000. The archive’s automated May 29, 2000 date conflicts with the contemporary notice; a civil death record has not been reviewed.</p>
+      <p><a href="{newspaper}" rel="noreferrer">View the archived newspaper notice <span class="external">(external; access may require a subscription)</span></a>. The newspaper clipping is not reproduced on this website. A Newspapers.com PDF export downloaded October 25, 2026 was checked for the earlier archive update. It is retained as source material, not published on this website.</p>
+      <p><strong>Family names in the notice:</strong> The newspaper named Carol Van Pelt and mentioned another daughter, two sisters, and six grandchildren. David identifies the unnamed daughter as his aunt Barbara Boggs McMunn. The newspaper itself did not name Barbara; that identification comes from his family account, not from the published newspaper notice.</p>
+      <p><strong>Memorial arrangements:</strong> The notice listed a service at Grace Village Chapel and plans for private graveside services at Lindenwood Cemetery in Fort Wayne. These were announced arrangements, not independently verified records of burial. It named Pleasant Grove Mission Fund in Warsaw as a suggested recipient of memorial contributions at that time; this page does not solicit donations.</p>
+      <p>The earlier <a href="{rootsweb}" rel="noreferrer">RootsWeb search <span class="external">(external)</span></a> remains a research lead, not a substitute for the identified newspaper notice.</p>
+      <p><strong>Photographs and the book:</strong> No family photograph, book cover, or book passage is reproduced in this edition. Family photographs may be added after verification and permission to publish. The <a href="family-account.html">family account</a> and the project’s exploratory research questions remain separate; this page makes no claim of a funded study, institutional partnership, tax-exempt status, or established treatment.</p>
+      <p class="editorial-note">Revised October 25, 2026. A personal family account, not a complete biography. The story may grow as further family memories and photographs are brought together.</p>
+    </div>
+  </details>
+</article>
+<section class="wrap section maxine-next" aria-label="Continue exploring">
+  <div><h2>Explore the project</h2></div>
+  <div class="maxine-next-links">
+    <a class="button primary" href="resources.html">Family resources</a>
+    <a class="button secondary" href="research/">Exploratory research</a>
+  </div>
+</section>'''
