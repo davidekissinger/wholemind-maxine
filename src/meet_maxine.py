@@ -1,10 +1,12 @@
 """Memorial page for Doris Maxine (Ratcliff) Boggs.
 
-A short 2000 newspaper death notice has now been located, but the clipping itself
-is not reproduced. It is paraphrased and attributed to the original newspaper
-page. Automated archive metadata conflicts with the article chronology; do not
-assert an independently unverified exact date of death. Family portraits remain
-pending permission. Keep memorial claims distinct from research.
+A 2026 Newspapers.com PDF export of the May 24, 2000 newspaper notice has
+been inspected. It reports Maxine's death the preceding Monday (May 22,
+2000). Attribute this as the newspaper-reported date, rather than a certified
+vital record; an automated archive index instead erroneously says May 29.
+Paraphrase the notice and link to the original archive, without hosting the
+copyrighted image or PDF. Family portraits remain pending permission.
+Keep memorial claims distinct from research.
 """
 from html import escape as E
 
@@ -46,7 +48,9 @@ def meet_maxine_page() -> str:
         '<p class="eyebrow">Her life. Our beginning.</p>'
         '<h2>Who was Maxine?</h2>'
         '<p>Maxine was a wife, mother, and grandmother. She married Rev. John Robert Boggs Jr. '
-        'on July 10, 1943; they later made their home in Winona Lake, Indiana.</p>'
+        'on July 10, 1943; they later made their home in Winona Lake, Indiana. '
+        'A contemporary newspaper notice reports that she died there on Monday, '
+        'May 22, 2000, at age 78.</p>'
         '<p>A brief newspaper notice published in May 2000 described Maxine as a homemaker. '
         'It named her daughter Carol Van Pelt of Redkey, Indiana, and mentioned another daughter. '
         'According to the family account, that daughter was Barbara Boggs McMunn, the aunt of '
@@ -83,10 +87,11 @@ def meet_maxine_page() -> str:
         '<p><a href="' + newspaper + '" rel="noreferrer">View the archived newspaper page '
         '<span class="external">(external; access may require a subscription)</span></a>. '
         'The newspaper clipping is not reproduced on this website.</p>'
-        '<p><strong>A date discrepancy:</strong> The May 24 notice says she died the preceding '
-        'Monday, which indicates May 22, 2000. The newspaper archive’s automated index lists '
-        'May 29, 2000, a date after the article’s publication. The exact date should be '
-        'independently confirmed before it is treated as established.</p>'
+        '<p><strong>Date of death:</strong> The May 24, 2000 newspaper notice states that '
+        'Maxine died on Monday, making May 22, 2000 the newspaper-reported date. '
+        'A separate automated newspaper-index entry gives May 29, 2000, which is '
+        'inconsistent with the notice’s publication date. The original notice takes '
+        'precedence here; a civil death record has not been reviewed.</p>'
         '<p><strong>Memorial arrangements:</strong> The notice listed a service at Grace Village '
         'Chapel and plans for private graveside services at Lindenwood Cemetery in Fort Wayne. '
         'These were announced arrangements, not independently verified records of burial.</p>'
@@ -109,9 +114,11 @@ def meet_maxine_page() -> str:
         'May 24, 2000, page 8, <cite>Mother dies</cite>. This archival '
         '<a href="' + newspaper + '" rel="noreferrer">newspaper record '
         '<span class="external">(external)</span></a> was identified from a founder-supplied '
-        'screenshot. Details here are paraphrased, not a transcription of the published notice. '
-        'The article and the archive’s auto-generated death date conflict; further confirmation '
-        'would be required to publish a definitive exact date.</p>'
+        'screenshot and subsequently checked against a one-page Newspapers.com PDF '
+        'export downloaded October 25, 2026. Details are paraphrased, not a '
+        'transcription of the notice. The reported date of death is May 22, 2000; '
+        'the archive’s May 29 automated index conflicts with this primary text. '
+        'The newspaper PDF is retained as source material, not published on this website.</p>'
         '<p><strong>Family identification:</strong> Founder David E. Kissinger identifies '
         'Barbara Boggs McMunn as Maxine’s other daughter and his aunt. Her name is from '
         'his family account, not from the published newspaper notice.</p>'

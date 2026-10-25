@@ -48,18 +48,26 @@ remains explicitly exploratory and separate from this family memorial.
   This is a founder-provided family statement, not independent verification
   and not a name found in the contemporary newspaper item. Keep that
   attribution explicit in the public biography.
-- **Date conflict requiring verification:** The article was printed on
-  Wednesday, May 24, 2000, and describes death on "Monday", suggesting
-  May 22, 2000. The archive screenshot's machine-generated index states
-  May 29, 2000, which postdates publication and cannot be correct for
-  this notice. The public page explains the inconsistency and does not
-  represent a precise death date as independently verified. An official
-  death record or second contemporary source would resolve this.
-- **Copyright/access boundary:** The clipping is viewed in a screenshot
-  supplied by the founder. We paraphrase factual information, link to the
-  original publisher/archive, and do **not** upload or reproduce the
-  newspaper image or its article text. Access to the linked archive may
-  require an account or subscription.
+- **New archival PDF, inspected October 25, 2026:** The founder uploaded a
+  one-page Newspapers.com PDF export of the May 24, 2000, page 8 clipping,
+  titled "Mother dies." The PDF itself displays the newspaper date, page,
+  publication location, archive image URL, and October 25, 2026 download
+  date. Its SHA-256 checksum is
+  `d12684e1cd660b3d2b30250bfb17121c300ed60bb697bb980842962470fa8c36`.
+  The PDF is a source artifact in the conversation, **not** part of the
+  public repository or website build.
+- **Newspaper-reported death date: May 22, 2000.** The notice appeared on
+  Wednesday, May 24, and directly reports that Maxine died on "Monday."
+  That is Monday, May 22. The archive screenshot's machine-generated
+  index indicates May 29, which is later than the published notice and
+  conflicts with the contemporary text. Use May 22 as a date attributed
+  to the newspaper, not as a separately confirmed civil-record date.
+  A civil death certificate could supply independent confirmation.
+- **Copyright/access boundary:** The article was reviewed in the founder's
+  screenshot and one-page Newspapers.com PDF export. We paraphrase factual
+  information, link to the original publisher/archive, and do **not** upload
+  or reproduce the newspaper clipping, PDF, or full article text in the
+  public repository or on the website. Archive access may require a subscription.
 
 ## Editorial boundaries
 
@@ -87,8 +95,8 @@ remains explicitly exploratory and separate from this family memorial.
 
 ## Future verified amendments
 
-Any longer obituary or independent death record that can resolve the exact
-date of death; any reproduction rights to quote or display the original
-newspaper clipping; family photo with publication permission and descriptive
-alt text; firsthand memories approved by the family; exact birth date or
-other life dates if supported by a reliable record.
+An independent civil death record to corroborate the newspaper-reported
+May 22, 2000 date; any longer obituary; any reproduction rights to quote or
+display the original newspaper clipping; family photo with publication
+permission and descriptive alt text; firsthand memories approved by the
+family; exact birth date or other life dates if supported by a reliable record.
