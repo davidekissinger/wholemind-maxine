@@ -1,6 +1,6 @@
 # Family story: source and editorial record
 
-Updated: October 11, 2026.
+Updated: October 25, 2026 (historical degree qualification added).
 Scope: the two `story.html` pages only. This addition does not change any
 educational resource PDF, clinical scope, organizational status, or access setting.
 
@@ -22,9 +22,17 @@ duration as independently verified by the publication records below.
 - Asbury Theological Seminary, **Alumni Obituaries – August 2013**,
   published July 25, 2013:
   https://alumni.asburyseminary.edu/elink/alumni-obituaries-august-2013/
-  Identifies John Robert Boggs Jr. as a minister and records his marriage to
-  Maxine Ratcliff. The page supports that identity and marital relationship;
-  it does not establish the caregiving duration or reproduce the book.
+  Identifies John Robert Boggs Jr. as a minister, lists his historical
+  credential as **(1949, BD)**, and records his marriage to Maxine Ratcliff.
+  Here BD denotes **Bachelor of Divinity**. The page supports his
+  educational, personal, and ministry identity; it does not establish the
+  caregiving duration or reproduce the book.
+- Association of Theological Schools' historical account of the shift
+  from the Bachelor of Divinity to Master of Divinity designation:
+  https://www.ats.edu/files/galleries/coa-history.pdf
+  BD was historically a graduate-level professional theological degree.
+  Preserve the credential and year Asbury records; do not relabel his
+  actual award as a retrospectively conferred MDiv.
 - Amazon bookseller record, ISBN **9780964888012**:
   https://www.amazon.com/-/es/ILl-Move-Over-Dealing-Alzheimers/dp/0964888017
   Search-indexed title/author metadata identifies *I'll Move Over: Spouse and
