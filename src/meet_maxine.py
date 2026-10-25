@@ -32,16 +32,15 @@ def meet_maxine_page() -> str:
   <p>In December 1999, I spent a few weeks with my grandfather at Grace Village in Winona Lake, Indiana. He had an apartment there, and Grandma was being cared for in the nursing home. I slept in his recliner. Each morning, after breakfast, we would go over to see her.</p>
   <p>By then, Grandma was bedridden and no longer responding to us. Grandpa still greeted her every day. He would tell her what good care the nurses and staff were giving her.</p>
   <p>Then he would gently move her soft white hair away from her face, first with his hand and then with her brush. He talked to her as he did it.</p>
-  <p>I watched him and could see how much he loved her. I have come to appreciate those mornings more as I’ve grown older.</p>
+  <p>I watched him and could see how much he loved her. I have come to appreciate the memories of those mornings more as I’ve grown older.</p>
   <h2>Grandma and Grandpa</h2>
-  <p>Grandma was only 57 when Alzheimer’s entered her life. She and Grandpa had married on July 10, 1943. By the time she died in May 2000, at 78, they had been married for nearly 57 years.</p>
+  <p>Grandma was only 57 when Alzheimer’s entered her life. By the time she died in May 2000, at 78, she and Grandpa had been married for nearly 57 years.</p>
   <p>My grandfather, Rev. John Robert Boggs Jr., wrote about their experience in a book called <cite>I’ll Move Over</cite>. His account is part of our family’s history. Those mornings at Grace Village are part of mine.</p>
   <p>This is one memory of Grandma, from late in her life. It isn’t her whole story. I want this page to grow as our family brings together more of our memories and photographs, including the years before Alzheimer’s.</p>
   <h2>Why I started The Maxine Project</h2>
   <p>I’m a nurse, but my connection to Alzheimer’s began in my own family. When I think about what families need, I think about Grandma and Grandpa, too.</p>
-  <p>I started this project to remember her and to work toward something useful for other families. I want it to become a place where people can find understandable information about Alzheimer’s, help with the questions that come with caring for someone, and a clearer understanding of the research.</p>
+  <p>I started this project to remember her and to work toward something useful for other families. I want it to become a place where people can find helpful information about Alzheimer’s, answers to the questions that arise when caring for someone, and a clearer understanding of the research.</p>
   <p>It’s still early. I’m beginning with our family’s story and building from there.</p>
-  <p>That’s why her name is here.</p>
   <div class="maxine-heritage-link">
     <a class="text-link" href="family-account.html">Read about Grandpa and <cite>I’ll Move Over</cite> <span aria-hidden="true">→</span></a>
   </div>
