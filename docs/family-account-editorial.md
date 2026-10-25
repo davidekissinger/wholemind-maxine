@@ -38,6 +38,27 @@ Dakota, and Indiana, and a soup kitchen established in Elkhart.
 This memorial does not independently document his caregiving duration
 or the contents of his book.
 
+**Credential verification (October 25, 2026):**
+- Asbury Theological Seminary's 2013 alumni memorial specifically
+  identifies Rev. John Robert Boggs Jr. as **"(1949, BD)"**:
+  https://alumni.asburyseminary.edu/elink/alumni-obituaries-august-2013/
+  Present his actual award as **Bachelor of Divinity (BD), 1949**,
+  never as an MDiv earned in 1949.
+- The Association of Theological Schools' institutional history
+  documents the professional transition from the Bachelor of Divinity
+  designation to Master of Divinity in North American seminaries:
+  https://www.ats.edu/files/galleries/coa-history.pdf
+  This supports describing the BD as a historical graduate-level
+  professional degree and predecessor of the MDiv. It does not show
+  that Asbury retroactively reissued Rev. Boggs's specific degree.
+- For independent contemporary usage, an Asbury Collegian May 23,
+  1950 report explicitly describes that year's Asbury Theological
+  Seminary graduates as receiving **Bachelor of Divinity** degrees:
+  https://kdl.kyvl.org/digital/collection/asbury-co/id/3842/
+- The Family Account page now displays `Rev. John Robert Boggs Jr., BD
+  (1949)` followed by `Bachelor of Divinity · Asbury Theological Seminary`.
+  The abbreviated founder story likewise carries the original degree.
+
 **Hardcover bookseller listing:** AbeBooks, ISBN 9780964888029:
 https://www.abebooks.fr/9780964888029/Move-Over-Story-Great-Love-0964888025/plp
 Lists *I'll Move Over: The Story of a Great Love* by J. Robert Boggs,
