@@ -50,7 +50,7 @@ BRANDS = {
   'story_detail':'Her name is the personal beginning of this work. The larger purpose is to keep a person’s life in view—not only the changes they are experiencing, but the relationships, preferences, and everyday moments that continue to matter.',
   'resource_title':'A starting place for families.',
   'resource_intro':'Practical preparation, a person-led profile, and a path to established resources. Free to use, with no signup or donation required.',
-  'resources':['when-memory-changes','what-matters-to-me','find-your-next-step'],
+  'resources':['when-memory-changes','what-matters-to-me','find-your-next-step','preserving-their-story'],
   'primary':'Explore family resources','primary_url':'resources.html',
   'connect_title':'Help the work begin thoughtfully.',
   'connect_text':'The Maxine Project begins with education and practical resources. Learn more about David, the founder, on his personal website.',
@@ -149,6 +149,16 @@ RESOURCES = {
   'pages':[section('See the person, not just the change','Skip any prompt. No diagnosis or sensitive identifying information is required.',
    ['What I enjoy and would like to keep in my life:','People or relationships that matter to me:','How I prefer people to communicate with me:','Routines, places, or traditions I value:','What helps me feel comfortable—and what I prefer to avoid:','What I would like others to understand:'],
    'Share only with permission. This is a conversation aid, not a legal directive, clinical care plan, capacity assessment, or substitute for supported decision-making.')]
+ },
+ 'preserving-their-story': {
+  'brand':'maxine','title':'Preserving Their Story','label':'Free family memory guide · print-friendly',
+  'description':'Practical prompts for identifying photographs, hearing family stories, and documenting what is known or uncertain.',
+  'intro':'Begin with one photograph, letter, or ordinary memory. Invite a story without testing anyone’s recall. A few careful details can help preserve a life beyond a name and a date.',
+  'pdf':None,
+  'pages':[section('Give a memory a place to live',
+   'Choose one photograph or keepsake and invite the person to tell the story in their own way. Listening matters more than completing a form. Ask permission before recording, copying, or sharing anything.\n\nWrite down who offered each detail and when. Keep direct observations, memories, and document-supported dates distinct. Leave uncertain details open rather than guessing.',
+   ['Who or what appears in this photograph or memory?','What story, place, routine, or relationship does it bring to mind?','What date or location is known—and what is only a recollection?','Who shared this story, and when?','Is there permission to copy or share it?'],
+   'Participation is voluntary. Do not pressure someone to remember, publish private information, or assume ownership of photographs means publication permission. This is a family-history aid, not a memory test or clinical tool.')]
  },
  'find-your-next-step': {
   'brand':'maxine','title':'Find Your Next Step','label':'Free resource directory · 2 pages',
