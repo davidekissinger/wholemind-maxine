@@ -36,7 +36,7 @@ def main():
     for brand in ('wholemind', 'maxine'):
         root = ROOT / 'dist' / brand
         paths = sorted(root.rglob('*.html'))
-        expected_pages = 17 if brand == 'maxine' else 12
+        expected_pages = 18 if brand == 'maxine' else 12
         assert len(paths) == expected_pages, f'{brand}: expected {expected_pages} pages, found {len(paths)}'
         for path in paths:
             page = Page(path.read_text(encoding='utf-8'))
