@@ -139,3 +139,7 @@ body[data-brand="maxine"] .section-nav{flex-wrap:wrap;justify-content:flex-end;c
   .maxine-family-hero h1{font-size:clamp(39px,8.3vw,56px)}
   .maxine-family-book .maxine-portrait-name{font-size:34px}
 }
+
+/* The fourth Maxine-only resource uses a balanced two-column grid. */
+body[data-brand="maxine"] .resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:780px){body[data-brand="maxine"] .resource-grid{grid-template-columns:1fr}}
