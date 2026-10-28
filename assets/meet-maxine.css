@@ -23,3 +23,11 @@
 .maxine-narrative-notes .editorial-note{font-size:14px}
 @media(max-width:780px){.maxine-narrative-hero{grid-template-columns:1fr;padding-top:28px;padding-bottom:28px}.maxine-family-portrait{max-width:300px}.maxine-narrative-story{padding-top:28px}.maxine-narrative-story .maxine-heritage-link{padding:16px 19px}}
 @media print{.maxine-narrative-hero{padding-top:20px}.maxine-narrative-story>p{font-size:12pt}.maxine-narrative-story .maxine-heritage-link{display:none}.maxine-narrative-story p{orphans:3;widows:3}.maxine-narrative-story h2{break-after:avoid}}
+
+/* A lightly separated first-person recollection, distinct from source records. */
+.maxine-family-recollections{margin:34px 0 42px;padding:27px 0 29px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.maxine-family-recollections .eyebrow{margin-bottom:8px}
+.maxine-family-recollections h2{margin:0 0 18px;font-size:clamp(27px,3vw,35px)}
+.maxine-family-recollections p:not(.eyebrow){margin:0 0 17px;line-height:1.7}
+.maxine-family-recollections .editorial-note{font-size:15px;color:var(--muted);margin-top:20px}
+@media print{.maxine-family-recollections{break-inside:auto}.maxine-family-recollections h2{break-after:avoid}}
