@@ -49,21 +49,21 @@ SITE_BRAND=maxine python3 build.py --deploy
 ## Source map
 
 - `src/content.py`: both brands' copy, resource contents, and source references.
-- `src/meet_maxine.py`: The Maxine Project's source-labeled memorial page, with a dated newspaper source and family photo pending permission.
+- `src/meet_maxine.py`: The Maxine Project's source-labeled memorial page, with an authentic family-supplied portrait, newspaper source notes, and first-person recollections.
 - `src/family_account.py`: A dedicated historical family account about Rev. John Robert Boggs Jr. and *I'll Move Over*.
 - `docs/family-account-editorial.md`: provenance, bibliographic uncertainties, and release boundaries for that page.
 - `build.py`: shared page templates, headers, navigation, and build selection.
 - `assets/site.css`: shared responsive layout, light/dark palettes, and light-only print styles.
 - `assets/appearance-init.js`: appearance preference and first-paint initialization.
 - `assets/site.js`: appearance controls, brand-link handoff, and local worksheet interactions.
-- `downloads/`: six original PDF resources, committed to the repository.
+- `downloads/`: six original PDF resources, committed to the repository. The additional Maxine-only *Preserving Their Story* guide is a print-friendly HTML worksheet without a separate PDF download.
 - `BASELINE_PDF_HASHES.json`: SHA-256 integrity baseline for those PDFs.
 - `check_site.py`: dependency-free page/link/resource and deployment checks.
 - `test_appearance_state.js`: isolated appearance behavior tests (not a live-browser audit).
 
 The Netlify build reads PDF files from this repository. It does not regenerate PDFs or download them from an older deployment. PDF revisions must be deliberate, reviewed, and accompanied by updated baseline hashes.
 
-## Release boundaries
+See `docs/family-visit-supplement-2026-10-28.md` for provenance and privacy boundaries for the new memory material. The private source recording and borrowed family photographs are not in the repository.\n\n## Release boundaries
 
 The Maxine Project's `meet-maxine.html` is an editable memorial first edition; see `docs/meet-maxine-editorial.md` for provenance, its newspaper death notice and image permissions. The `family-account.html` page is likewise source-labeled and editable; see `docs/family-account-editorial.md` for the book's bibliographic boundaries and the distinction between founder family history and independent records. The review banner and `noindex` remain enabled. This migration does **not** approve final legal status, change operator disclosures, activate donations or paid products, or remove the content-review requirement. `LAUNCH_MODE=public` changes the banner and indexing only, not legal facts or access controls; use it only after approval. A review banner is not password protection.
 

@@ -55,6 +55,10 @@ def family_account_page() -> str:
   <p>According to his grandson David E. Kissinger's family account, Rev. Boggs cared for Maxine for more than two decades. The experience became part of the history he sought to preserve in <cite>I'll Move Over</cite>, published under the name J. Robert Boggs.</p>
   <p>His life and work also extended far beyond the caregiving role. Asbury Theological Seminary's alumni memorial lists him as a Bachelor of Divinity (BD) graduate in 1949 and records his service as a United Methodist minister beginning in 1944, his retirement in 1992, ministry in Ohio, North Dakota, and Indiana, and his establishment of a soup kitchen in Elkhart, Indiana.</p>
 
+  <h2 id="elkhart-memories">Remembering the home in Elkhart</h2>
+  <p>David remembers visiting his grandparents in Elkhart, including the kitchen, the dining room, and a separate space where his grandfather prepared sermons. He also remembers two doves that Rev. Boggs used in magic shows for children. Those details offer a glimpse of family life and ministry beyond the written record of pastoral appointments.</p>
+  <p class="editorial-note">Source: David E. Kissinger’s own memories, revisited while looking through family photographs in October 2026. This is a personal recollection, not a passage from <cite>I'll Move Over</cite> or a separately verified description of the home.</p>
+
   <h2 id="the-book">The book in the family</h2>
   <p>For this project, <cite>I'll Move Over</cite> is a personal family account and an important historical touchstone. It is not presented as a medical guide, a clinical study, or a substitute for current healthcare information.</p>
   <p>Bookseller records identify a hardcover titled <cite>I'll Move Over: The Story of a Great Love</cite>, attributed to J. Robert Boggs and listed as published by Boggs Books in 1995 (ISBN 9780964888029). Other catalog listings use the broader <cite>I'll Move Over</cite> title with different subtitles and a separate ISBN. The publication records have not been reconciled against physical copies.</p>

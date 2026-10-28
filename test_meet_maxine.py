@@ -79,8 +79,15 @@ def run_checks(root=ROOT):
         story = html.split('id="her-story"', 1)[1].split('<details', 1)[0]
         check('I have come to appreciate the memories of those mornings more as I’ve grown older.' in story,
               mode + ': family-review memory wording missing')
-        check('Grandma was only 57 when Alzheimer’s entered her life.' in story,
-              mode + ': approved onset-age wording changed')
+        check('Our family remembers Grandma as being around 57' in story and
+              'exact beginning is difficult to identify' in story,
+              mode + ': approximate family-recalled onset wording missing')
+        check('id="years-of-change-heading"' in story and
+              'Lake James' in story and
+              'not a clinical history or a verified timeline' in story,
+              mode + ': attributed memories or uncertainty disclosure missing')
+        check('href="resources/preserving-their-story.html"' in story,
+              mode + ': link to family memory guide missing')
         check('July 10, 1943' not in story and 'July 10, 1943' in html,
               mode + ': wedding date must remain in source notes, not the narrative')
         check('she and Grandpa had been married for nearly 57 years.' in story,
