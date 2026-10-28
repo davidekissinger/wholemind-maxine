@@ -60,7 +60,12 @@ def run_checks(root=ROOT):
         doc = Doc(html)
         check(doc.h1 == 1, mode + ': memorial must have one H1')
         check(len(doc.ids) == len(set(doc.ids)), mode + ': duplicate IDs')
-        check(doc.images == 0 and doc.forms == 0, mode + ': no stock portrait or data form')
+        check(doc.images == 1 and doc.forms == 0, mode + ': exactly one family portrait and no data form')
+        check('src="assets/maxine-portrait.webp"' in html and 'alt="Portrait of Doris Maxine Boggs' in html,
+              mode + ': portrait source or alt text missing')
+        check((base / 'maxine/assets/maxine-portrait.webp').is_file() and
+              not (base / 'wholemind/assets/maxine-portrait.webp').exists(),
+              mode + ': Maxine portrait asset missing or leaked to WholeMind')
         check('noindex, nofollow' in doc.robots, mode + ': review indexing boundary removed')
         check('Meet Maxine' in html and 'Doris Maxine (Ratcliff) Boggs' in html,
               mode + ': missing memorial identity')
@@ -119,8 +124,13 @@ def run_checks(root=ROOT):
               mode + ': family provenance distinction missing')
         check('It is <strong>his</strong> obituary, not hers.' in html,
               mode + ': Asbury source provenance missing')
-        check('verification and permission to publish' in html,
-              mode + ': photograph permission boundary missing')
+        check('family-supplied studio portrait' in html and
+              'No newspaper obituary clipping' in html,
+              mode + ': portrait provenance or newspaper reproduction boundary missing')
+        check('The Elkhart Truth' in html and 'Ratliff' in html and 'Ratcliff' in html,
+              mode + ': memorial source or surname discrepancy missing')
+        check('href="family-account.html#robert-earl"' in html,
+              mode + ': link to Robert Earl history missing')
         check(all(anchor in doc.ids for anchor in ('her-story', 'sources', 'obituary')),
               mode + ': existing story or source anchor lost')
         notes = [a for a in doc.details if a.get('id') == 'sources']

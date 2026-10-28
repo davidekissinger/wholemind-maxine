@@ -2,8 +2,9 @@
 
 The Grace Village recollection is adapted from David E. Kissinger's memoir,
 not invented dialogue or a quotation from Maxine. Historical qualifications
-remain in an expandable section. No archival image or copyrighted clipping
-is reproduced. This module changes only The Maxine Project's memorial page.
+remain in an expandable section. A founder-supplied family portrait is shown;
+newspaper obituary clippings are summarized, not reproduced. This module
+changes only The Maxine Project's memorial page.
 """
 from html import escape as E
 
@@ -27,6 +28,10 @@ def meet_maxine_page() -> str:
     <p class="hero-intro">To me, she was Grandma Boggs.</p>
     <p class="story-credit">By David E. Kissinger, BSHA, RN <span class="maxine-narrative-relationship">Her grandson</span></p>
   </div>
+  <figure class="maxine-family-portrait">
+    <img src="assets/maxine-portrait.webp" width="400" height="475" loading="eager" decoding="async" alt="Portrait of Doris Maxine Boggs smiling in glasses with a pink corsage">
+    <figcaption>Doris Maxine Boggs · Family portrait, date not recorded</figcaption>
+  </figure>
 </section>
 <article class="wrap reading section maxine-tribute maxine-narrative-story" id="her-story" aria-label="A grandson’s memory">
   <p>In December 1999, I spent a few weeks with my grandfather at Grace Village in Winona Lake, Indiana. He had an apartment there, and Grandma was being cared for in the nursing home. I slept in his recliner. Each morning, after breakfast, we would go over to see her.</p>
@@ -44,18 +49,28 @@ def meet_maxine_page() -> str:
   <div class="maxine-heritage-link">
     <a class="text-link" href="family-account.html">Read about Grandpa and <cite>I’ll Move Over</cite> <span aria-hidden="true">→</span></a>
   </div>
+  <section class="maxine-archive-life" id="life-beyond-alzheimers" aria-labelledby="maxine-life-heading">
+    <p class="eyebrow">From the family archive</p>
+    <h2 id="maxine-life-heading">More of Maxine’s life</h2>
+    <p>Maxine was born on April 5, 1922, in Brush, Colorado, to Charles and Henrietta (Johnson) Ratliff, according to a memorial obituary published in 2000. She married Rev. John Robert Boggs Jr. in 1943.</p>
+    <p>The memorial describes her as a homemaker who assisted her husband in his ministry and took part in Child Evangelism Clubs and United Methodist Women. During 1981–1985, her husband served as pastor of Grace United Methodist Church in Elkhart, Indiana.</p>
+    <p>Maxine died on May 22, 2000, at age 78 in Winona Lake, Indiana. Her memorial names her surviving daughters Carol Van Pelt and Barbara McMunn, along with six grandchildren and four great-grandchildren. These details belong to the history of her life, beyond the illness that shaped its later years.</p>
+    <p class="editorial-note"><strong>Source:</strong> Family-preserved memorial obituary for Doris M. Boggs, published as a tribute in <cite>The Elkhart Truth</cite>, Elkhart, Indiana, May 24, 2000. The facts are paraphrased here; the newspaper clipping is not reproduced. This obituary is not a clinical record of Alzheimer’s disease.</p>
+    <a class="text-link" href="family-account.html#robert-earl">Robert Earl Boggs: another life in the family story <span aria-hidden="true">→</span></a>
+  </section>
   <details class="future-note maxine-archive maxine-narrative-sources" id="sources">
     <summary>Family memories and historical sources</summary>
     <div id="obituary" class="maxine-narrative-notes">
       <p><strong>The personal memory:</strong> The Grace Village passage is adapted from David E. Kissinger’s own recollections of December 1999, recorded in his memoir manuscript <cite>Am I Ready? A Nurse’s Journey Through Change</cite>. The age of 57 at the onset of Alzheimer’s is also from his family account. This is a grandson’s recollection, not a clinical record or a quotation from Maxine.</p>
       <p><strong>Marriage and family history:</strong> An <a href="{asbury}" rel="noreferrer">Asbury Theological Seminary alumni obituary <span class="external">(external)</span></a> for Rev. John Robert Boggs Jr. records his marriage to Maxine Ratcliff on July 10, 1943, their residence in Winona Lake, and her death in May 2000. It is <strong>his</strong> obituary, not hers.</p>
+      <p><strong>The family memorial obituary:</strong> A photographed memorial notice for Doris M. Boggs, printed as a tribute in <cite>The Elkhart Truth</cite> on May 24, 2000, records her birth on April 5, 1922, in Brush, Colorado, her parents Charles and Henrietta (Johnson) Ratliff, and her participation in church and community activities. The printed notice names Carol Van Pelt and Barbara McMunn as her surviving daughters and lists six grandchildren and four great-grandchildren. The original print was supplied by the founder on October 28, 2026. Her birth surname is spelled <em>Ratliff</em> there, while the previously cited Asbury alumni memorial spells it <em>Ratcliff</em>; the discrepancy has not been independently resolved.</p>
       <p><strong>The newspaper notice:</strong> A short item titled <cite>Mother dies</cite> appeared in <cite>The Star Press</cite>, Muncie, Indiana, on May 24, 2000, page 8. It reported that Maxine died at age 78 at Grace Village Retirement Community. The notice says she died on Monday, corresponding to May 22, 2000. The archive’s automated May 29, 2000 date conflicts with the contemporary notice; a civil death record has not been reviewed.</p>
       <p><a href="{newspaper}" rel="noreferrer">View the archived newspaper notice <span class="external">(external; access may require a subscription)</span></a>. The newspaper clipping is not reproduced on this website. A Newspapers.com PDF export downloaded October 25, 2026 was checked for the earlier archive update. It is retained as source material, not published on this website.</p>
-      <p><strong>Family names in the notice:</strong> The newspaper named Carol Van Pelt and mentioned another daughter, two sisters, and six grandchildren. David identifies the unnamed daughter as his aunt Barbara Boggs McMunn. The newspaper itself did not name Barbara; that identification comes from his family account, not from the published newspaper notice.</p>
+      <p><strong>Family names in the shorter notice:</strong> The <cite>Star Press</cite> item named Carol Van Pelt and mentioned another daughter, two sisters, and six grandchildren. David previously identified the unnamed daughter as his aunt Barbara Boggs McMunn. The newspaper itself did not name Barbara; that identification comes from his family account, not from the published newspaper notice. The newly supplied, longer <cite>Elkhart Truth</cite> memorial independently prints Barbara McMunn's name.</p>
       <p><strong>Memorial arrangements:</strong> The notice listed a service at Grace Village Chapel and plans for private graveside services at Lindenwood Cemetery in Fort Wayne. These were announced arrangements, not independently verified records of burial. It named Pleasant Grove Mission Fund in Warsaw as a suggested recipient of memorial contributions at that time; this page does not solicit donations.</p>
       <p>The earlier <a href="{rootsweb}" rel="noreferrer">RootsWeb search <span class="external">(external)</span></a> remains a research lead, not a substitute for the identified newspaper notice.</p>
-      <p><strong>Photographs and the book:</strong> No family photograph, book cover, or book passage is reproduced in this edition. Family photographs may be added after verification and permission to publish. The <a href="family-account.html">family account</a> and the project’s exploratory research questions remain separate; this page makes no claim of a funded study, institutional partnership, tax-exempt status, or established treatment.</p>
-      <p class="editorial-note">Revised October 25, 2026. A personal family account, not a complete biography. The story may grow as further family memories and photographs are brought together.</p>
+      <p><strong>Photograph and publication boundaries:</strong> The family-supplied studio portrait shown above was provided by David E. Kissinger for the project; its original photographer and date are unverified. No newspaper obituary clipping, book cover, or book passage is reproduced on this site. The <a href="family-account.html">family account</a> and exploratory research questions remain separate; this page makes no claim of a funded study, institutional partnership, tax-exempt status, or established treatment.</p>
+      <p class="editorial-note">Archival sources added October 28, 2026. A personal family account and selected historical facts, not a complete biography or clinical history.</p>
     </div>
   </details>
 </article>

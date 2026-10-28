@@ -73,6 +73,11 @@ def run_checks(root=ROOT):
               mode + ': Family Account title is missing')
         check('id="partner-witness"' in html and 'id="carrying-forward"' in html,
               mode + ': narrative sections are missing')
+        check('id="robert-earl"' in html and 'Parker High School' in html and
+              'Great Lakes' in html and 'ministry' in html,
+              mode + ': Robert Earl obituary summary missing')
+        check('1964 is consistent' in html and 'publication year is not visible' in html,
+              mode + ': obituary year uncertainty missing')
         check('9780964888029' in html and '9780964888012' in html,
               mode + ': ISBN source distinction has been lost')
         check("The book's full text and dedication have not yet been examined" in html,
