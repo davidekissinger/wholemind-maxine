@@ -1,5 +1,12 @@
 /* Meet Maxine only. Shared navigation, themes, and other pages are unchanged. */
-.maxine-narrative-hero{display:block;max-width:840px;padding-top:54px;padding-bottom:32px;border-bottom:1px solid var(--line)}
+.maxine-narrative-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(230px,320px);align-items:center;gap:clamp(30px,5vw,66px);max-width:1040px;padding-top:54px;padding-bottom:32px;border-bottom:1px solid var(--line)}
+.maxine-family-portrait{margin:0;max-width:320px}
+.maxine-family-portrait img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line);box-shadow:0 14px 32px rgba(20,20,20,.08)}
+.maxine-family-portrait figcaption{margin-top:11px;color:var(--muted);font-size:13px;line-height:1.5}
+.maxine-archive-life{padding:27px 0 22px;margin:28px 0 22px;border-top:1px solid var(--line)}
+.maxine-archive-life .eyebrow{margin-bottom:10px}
+.maxine-archive-life .editorial-note{font-size:15px;line-height:1.6;margin:20px 0 10px}
+.maxine-archive-life .text-link{margin-top:14px}
 .maxine-narrative-hero .maxine-full-name{font-family:var(--sans);font-size:19px;color:var(--muted)}
 .maxine-narrative-hero .hero-intro{font-family:var(--serif);font-size:clamp(26px,3.5vw,33px);line-height:1.35;max-width:none}
 .maxine-narrative-hero .story-credit{margin-top:24px;font-size:15px;font-weight:500}
@@ -14,5 +21,5 @@
 .maxine-narrative-sources summary{font-size:17px}
 .maxine-narrative-notes p{font-size:16px;line-height:1.65;margin-bottom:18px}
 .maxine-narrative-notes .editorial-note{font-size:14px}
-@media(max-width:780px){.maxine-narrative-hero{padding-top:28px;padding-bottom:28px}.maxine-narrative-story{padding-top:28px}.maxine-narrative-story .maxine-heritage-link{padding:16px 19px}}
+@media(max-width:780px){.maxine-narrative-hero{grid-template-columns:1fr;padding-top:28px;padding-bottom:28px}.maxine-family-portrait{max-width:300px}.maxine-narrative-story{padding-top:28px}.maxine-narrative-story .maxine-heritage-link{padding:16px 19px}}
 @media print{.maxine-narrative-hero{padding-top:20px}.maxine-narrative-story>p{font-size:12pt}.maxine-narrative-story .maxine-heritage-link{display:none}.maxine-narrative-story p{orphans:3;widows:3}.maxine-narrative-story h2{break-after:avoid}}

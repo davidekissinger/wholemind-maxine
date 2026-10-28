@@ -126,6 +126,8 @@ def build():
   for b,c in BRANDS.items():
    target=base/b;target.mkdir(parents=True)
    shutil.copytree(ROOT/'assets',target/'assets')
+   if b=='maxine':
+    shutil.copy2(ROOT/'maxine-assets'/'maxine-portrait.webp',target/'assets'/'maxine-portrait.webp')
    (target/'downloads').mkdir()
    for slug in c['resources']:
     pdf=ROOT/'downloads'/RESOURCES[slug]['pdf']

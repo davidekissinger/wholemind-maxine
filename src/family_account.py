@@ -60,6 +60,11 @@ def family_account_page() -> str:
   <p>Bookseller records identify a hardcover titled <cite>I'll Move Over: The Story of a Great Love</cite>, attributed to J. Robert Boggs and listed as published by Boggs Books in 1995 (ISBN 9780964888029). Other catalog listings use the broader <cite>I'll Move Over</cite> title with different subtitles and a separate ISBN. The publication records have not been reconciled against physical copies.</p>
   <p>The book's full text and dedication have not yet been examined for this website. The meaning described here comes from the founder's family account, not from a claimed close reading or a quotation from the book.</p>
 
+  <h2 id="robert-earl">Robert Earl Boggs: a life remembered</h2>
+  <p>Robert Earl Boggs was the son of Maxine and Rev. John Robert Boggs Jr. He was 19 when he died in a two-car collision on Indiana State Road 9 near Marion. A family-preserved newspaper obituary records that he was salutatorian of Parker High School's class of 1963, entered the U.S. Navy in June 1963, trained at Great Lakes, and was assigned to Philadelphia.</p>
+  <p>Robert had announced his intention to enter the ministry after his Navy service. His memorial named his sisters Betty, Carol, and Barbara and listed burial at Lindenwood Cemetery in Fort Wayne. The clipping gives the day of death as Sunday, July 5, but its publication year is not visible; 1964 is consistent with that weekday and the account's chronology, rather than independently confirmed from the clipping.</p>
+  <p class="editorial-note">Source: Founder-supplied photograph of an undated newspaper obituary headed “Robert Earl Boggs,” provided October 28, 2026. These details are paraphrased from that record. Its announced burial arrangements are not independently verified; the original newspaper clipping is not reproduced here.</p>
+
   <h2 id="carrying-forward">Carrying the legacy forward</h2>
   <p>For David E. Kissinger, the story of Maxine and his grandfather connects private family experience with a public purpose: education and resources that honor the person experiencing cognitive change and recognize the people who care for them.</p>
   <p>The Maxine Project draws its human motivation from this history. It can inform which questions deserve attention and how resources are written, while scientific and medical claims must still be evaluated on evidence independent of any single family's experience.</p>
@@ -76,7 +81,7 @@ def family_account_page() -> str:
   <details class="future-note maxine-archive" id="editorial-record">
     <summary>About the family account and source boundaries</summary>
     <p>The family relationship, the caregiving duration, and the personal importance of <cite>I'll Move Over</cite> are attributed to founder David E. Kissinger. The alumni memorial and bookseller listings support only the biographical and bibliographic facts specifically identified above.</p>
-    <p>No book passage, dedication, cover, family photograph, or reproduced newspaper clipping appears on this page. No publisher rights, existing distribution partnership, nonprofit recognition, or research endorsement is claimed.</p>
+    <p>The Robert Earl Boggs account comes from a family-held, undated newspaper obituary rather than Rev. Boggs's book. The death year is inferred, not printed. No book passage, dedication, cover, family photograph, or reproduced newspaper clipping appears on this page. No publisher rights, existing distribution partnership, nonprofit recognition, or research endorsement is claimed.</p>
     <p>This is new website editorial writing, not a transcript of Rev. Boggs's book. The differences among bookseller titles and ISBNs remain an open bibliographic question until copies can be checked directly.</p>
   </details>
 </article>
