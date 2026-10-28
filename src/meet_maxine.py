@@ -42,6 +42,14 @@ def meet_maxine_page() -> str:
   <p>Our family remembers Grandma as being around 57 when changes first became noticeable, although the exact beginning is difficult to identify. By the time she died in May 2000, at 78, she and Grandpa had been married for nearly 57 years.</p>
   <p>My grandfather, Rev. John Robert Boggs Jr., wrote about their experience in a book called <cite>I’ll Move Over</cite>. His account is part of our family’s history. Those mornings at Grace Village are part of mine.</p>
   <p>This is one memory of Grandma, from late in her life. It isn’t her whole story. I want this page to grow as our family brings together more of our memories and photographs, including the years before Alzheimer’s.</p>
+  <section class="maxine-family-recollections" id="years-of-change" aria-labelledby="years-of-change-heading">
+    <p class="eyebrow">Family recollections · October 2026</p>
+    <h2 id="years-of-change-heading">Remembering the years of change</h2>
+    <p>Looking through family photographs brought back memories of the years Grandma and Grandpa lived at Lake James. I remember nights when Grandma was awake and the family was concerned for her safety. The passage of time has made it difficult to place those moments on a precise timeline.</p>
+    <p>Those memories are only one part of her story. I also want to preserve the faces, places, and everyday experiences that shaped Grandma’s life, and to learn what the photographs can tell us about the years before her illness.</p>
+    <p class="editorial-note">Personal family recollections revisited in October 2026. This is not a clinical history or a verified timeline.</p>
+    <a class="text-link" href="resources/preserving-their-story.html">Preserve a family story with our free guide <span aria-hidden="true">→</span></a>
+  </section>
   <h2>Why I started The Maxine Project</h2>
   <p>I’m a nurse, but my connection to Alzheimer’s began in my own family. When I think about what families need, I think about Grandma and Grandpa, too.</p>
   <p>I started this project to remember her and to work toward something useful for other families. I want it to become a place where people can find helpful information about Alzheimer’s, answers to the questions that arise when caring for someone, and a clearer understanding of the research.</p>
