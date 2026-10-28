@@ -91,8 +91,10 @@ def main():
     memorial_checks = memorial_checks_run(ROOT)
     from test_family_account import run_checks as account_checks_run
     family_account_checks = account_checks_run(ROOT)
+    from test_family_memory import run_checks as memory_checks_run
+    memory_checks = memory_checks_run(ROOT)
     print(f'PASS: {research_checks} research integrity checks, {memorial_checks} memorial integrity checks, '
-          f'{family_account_checks} family account checks.')
+          f'{family_account_checks} family account checks, {memory_checks} family memory guide checks.')
     print(f'PASS: {len(pages)} pages, {checked} internal references, six unchanged PDFs, and publish integrity.')
 
 if __name__ == '__main__':
