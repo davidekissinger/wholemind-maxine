@@ -30,6 +30,7 @@ def family_account_page() -> str:
     <p class="hero-intro">The story of a family does not stop at a diagnosis. It continues in the everyday choices to adapt, care, and remain connected through change.</p>
     <div class="actions">
       <a class="button primary" href="#partner-witness">Read the account</a>
+      <a class="text-link" href="#lifetime-together">Their life together <span aria-hidden="true">→</span></a>
       <a class="text-link" href="meet-maxine.html">Meet Maxine <span aria-hidden="true">→</span></a>
     </div>
   </div>
