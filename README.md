@@ -51,7 +51,9 @@ SITE_BRAND=maxine python3 build.py --deploy
 - `src/content.py`: both brands' copy, resource contents, and source references.
 - `src/meet_maxine.py`: The Maxine Project's source-labeled memorial page, with an authentic family-supplied portrait, newspaper source notes, and first-person recollections.
 - `src/family_account.py`: A dedicated historical family account about Rev. John Robert Boggs Jr. and *I'll Move Over*.
+- `src/lifetime_together.py`: Source-attributed lifetime milestones and 1985 Grace UMC farewell, with the 1992 retirement-record distinction.
 - `docs/family-account-editorial.md`: provenance, bibliographic uncertainties, and release boundaries for that page.
+- `docs/boggs-retirement-scrapbook-2026-10-30.md`: 18-page scrapbook page map, source checksum, timeline limitations, and image/newspaper rights boundaries.
 - `build.py`: shared page templates, headers, navigation, and build selection.
 - `assets/site.css`: shared responsive layout, light/dark palettes, and light-only print styles.
 - `assets/appearance-init.js`: appearance preference and first-paint initialization.

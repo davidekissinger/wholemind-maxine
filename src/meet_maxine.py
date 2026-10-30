@@ -64,6 +64,9 @@ def meet_maxine_page() -> str:
     <p>The memorial describes her as a homemaker who assisted her husband in his ministry and took part in Child Evangelism Clubs and United Methodist Women. During 1981–1985, her husband served as pastor of Grace United Methodist Church in Elkhart, Indiana.</p>
     <p>Maxine died on May 22, 2000, at age 78 in Winona Lake, Indiana. Her memorial names her surviving daughters Carol Van Pelt and Barbara McMunn, along with six grandchildren and four great-grandchildren. These details belong to the history of her life, beyond the illness that shaped its later years.</p>
     <p class="editorial-note"><strong>Source:</strong> Family-preserved memorial obituary for Doris M. Boggs, published as a tribute in <cite>The Elkhart Truth</cite>, Elkhart, Indiana, May 24, 2000. The facts are paraphrased here; the newspaper clipping is not reproduced. This obituary is not a clinical record of Alzheimer’s disease.</p>
+
+    <p>A commemorative scrapbook preserved by the family records the couple's years at Grace United Methodist Church and a 1985 retirement dinner that honored Bob and Maxine together. It offers another glimpse of Maxine's life before the memories of caregiving that appear earlier on this page.</p>
+    <a class="text-link" href="family-account.html#lifetime-together">Explore Bob and Maxine's life together, 1943–1985 <span aria-hidden="true">→</span></a>
     <a class="text-link" href="family-account.html#robert-earl">Robert Earl Boggs: another life in the family story <span aria-hidden="true">→</span></a>
   </section>
   <details class="future-note maxine-archive maxine-narrative-sources" id="sources">

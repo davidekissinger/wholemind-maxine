@@ -8,6 +8,7 @@ evidence or an authorized edition of the book.
 from html import escape
 
 from family_story import BIOGRAPHY_URL, BOOK_RECORD_URL, ALTERNATE_RECORD_URL
+from lifetime_together import lifetime_together_section
 
 ATS_DEGREE_HISTORY_URL = 'https://www.ats.edu/files/galleries/coa-history.pdf'
 
@@ -29,6 +30,7 @@ def family_account_page() -> str:
     <p class="hero-intro">The story of a family does not stop at a diagnosis. It continues in the everyday choices to adapt, care, and remain connected through change.</p>
     <div class="actions">
       <a class="button primary" href="#partner-witness">Read the account</a>
+      <a class="text-link" href="#lifetime-together">Their life together <span aria-hidden="true">→</span></a>
       <a class="text-link" href="meet-maxine.html">Meet Maxine <span aria-hidden="true">→</span></a>
     </div>
   </div>
@@ -58,6 +60,8 @@ def family_account_page() -> str:
   <h2 id="elkhart-memories">Remembering the home in Elkhart</h2>
   <p>David remembers visiting his grandparents in Elkhart, including the kitchen, the dining room, and a separate space where his grandfather prepared sermons. He also remembers two doves that Rev. Boggs used in magic shows for children. Those details offer a glimpse of family life and ministry beyond the written record of pastoral appointments.</p>
   <p class="editorial-note">Source: David E. Kissinger’s own memories, revisited while looking through family photographs in October 2026. This is a personal recollection, not a passage from <cite>I'll Move Over</cite> or a separately verified description of the home.</p>
+
+  {lifetime_together_section()}
 
   <h2 id="the-book">The book in the family</h2>
   <p>For this project, <cite>I'll Move Over</cite> is a personal family account and an important historical touchstone. It is not presented as a medical guide, a clinical study, or a substitute for current healthcare information.</p>

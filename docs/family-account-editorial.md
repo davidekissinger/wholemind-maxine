@@ -112,3 +112,12 @@ A family-owned or otherwise accessible copy of the book's title page,
 copyright page, dedication, table of contents and text would allow
 checking its specific content, exact subtitle, ISBN/edition relationship,
 and any excerpts that might be suitable for licensed republication.
+
+
+## October 30, 2026 — Bob and Maxine retirement scrapbook supplement
+
+The family-account page now includes a source-attributed section, "A lifetime together: Bob and Maxine," linked from "Meet Maxine." It describes selected milestones through the 1985 Grace UMC farewell, including their fortieth anniversary and the May 24, 1985 dinner which a contemporary Elkhart newspaper reports honored Rev. **and Mrs.** Boggs.
+
+Full source mapping, the scan's SHA-256 checksum, pages, newspaper provenance, the unresolved June reception day, publication restrictions, and the **1985 versus 1992** retirement-date distinction are documented in [boggs-retirement-scrapbook-2026-10-30.md](boggs-retirement-scrapbook-2026-10-30.md).
+
+This addition is **not** a claim that Bob's entire ministry ended in 1985; Asbury's alumni obituary specifically says he retired in 1992. Nor is it evidence of an Alzheimer's diagnosis date. It is a family-history milestone text, not an authorized reproduction of the 18-page scrapbook. The photos, original scrapbook PDF, poetic tribute text, and newspaper clipping remain offsite in the family's private archive until rights and attribution can be established. All previously established review/noindex and non-clinical boundaries remain in force.

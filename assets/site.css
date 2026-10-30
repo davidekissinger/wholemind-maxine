@@ -143,3 +143,41 @@ body[data-brand="maxine"] .section-nav{flex-wrap:wrap;justify-content:flex-end;c
 /* The fourth Maxine-only resource uses a balanced two-column grid. */
 body[data-brand="maxine"] .resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:780px){body[data-brand="maxine"] .resource-grid{grid-template-columns:1fr}}
+
+
+/* Maxine-only 1943–1985 archival timeline; no effects on WholeMind Living. */
+body[data-brand="maxine"] .maxine-lifetime {
+  border-top:1px solid var(--line);
+  padding-top:44px;
+  margin-top:46px;
+}
+body[data-brand="maxine"] .maxine-lifetime > h3 {margin-top:35px}
+body[data-brand="maxine"] .maxine-archive-timeline {
+  display:grid; gap:14px; list-style:none;
+  margin:28px 0 36px; padding:0;
+}
+body[data-brand="maxine"] .maxine-archive-timeline li {
+  display:grid; grid-template-columns:minmax(84px,120px) 1fr;
+  gap:21px; padding:22px 25px; align-items:start;
+  border:1px solid var(--line); border-radius:10px; background:var(--surface);
+}
+body[data-brand="maxine"] .maxine-archive-timeline .archive-year {
+  font-size:16px; font-weight:700; color:var(--accent); letter-spacing:.015em;
+}
+body[data-brand="maxine"] .maxine-archive-timeline h3 {
+  font-size:clamp(21px,2.2vw,25px); margin:0 0 9px;
+}
+body[data-brand="maxine"] .maxine-archive-timeline p {
+  margin:0; font-size:17px; line-height:1.5;
+}
+body[data-brand="maxine"] .maxine-archive-provenance {margin-top:38px}
+body[data-brand="maxine"] .maxine-archive-provenance p {font-size:16px}
+@media(max-width:580px) {
+  body[data-brand="maxine"] .maxine-lifetime {margin-top:34px;padding-top:28px}
+  body[data-brand="maxine"] .maxine-archive-timeline li {
+    grid-template-columns:1fr;gap:8px;padding:18px;
+  }
+}
+@media print {
+  body[data-brand="maxine"] .maxine-archive-timeline li {break-inside:avoid;background:#fff!important}
+}
