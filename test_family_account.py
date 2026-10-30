@@ -73,6 +73,14 @@ def run_checks(root=ROOT):
               mode + ': Family Account title is missing')
         check('id="partner-witness"' in html and 'id="carrying-forward"' in html,
               mode + ': narrative sections are missing')
+        check('id="lifetime-together"' in html and 'A lifetime together: Bob and Maxine' in html,
+              mode + ': archival history heading/anchor missing')
+        check('May 24' in html and 'May 31, 1985' in html and 'name quilt' in html,
+              mode + ': 1985 joint recognition and source details missing')
+        check('1992 as the year Bob retired' in html and '1985 farewell' in html,
+              mode + ': 1985 Grace event and 1992 retirement distinction missing')
+        check('original scrapbook pages 5–9' in html and 'not reproduced here' in html,
+              mode + ': archival provenance and permissions boundaries missing')
         check('id="robert-earl"' in html and 'Parker High School' in html and
               'Great Lakes' in html and 'ministry' in html,
               mode + ': Robert Earl obituary summary missing')
@@ -93,6 +101,8 @@ def run_checks(root=ROOT):
         story = (base / 'maxine' / 'story.html').read_text(encoding='utf-8')
         check(memorial.count('href="family-account.html"') >= 2,
               mode + ': Meet Maxine family-account links not updated')
+        check('href="family-account.html#lifetime-together"' in memorial,
+              mode + ': Meet Maxine does not link to the new archive chapter')
         check('href="family-account.html"' in story,
               mode + ': shorter founder story is not connected')
         check('family-account.html' in (base / 'maxine' / 'sitemap.xml').read_text(encoding='utf-8'),
