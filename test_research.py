@@ -55,6 +55,18 @@ def run_checks(root=ROOT):
     for path in ('research/index.html', 'research/synaptic-restoration/index.html'):
         text = (root / 'dist/maxine' / path).read_text(encoding='utf-8')
         check(BOUNDARY in text, 'Missing visible research status')
+    overview = (root / 'dist/maxine/research/index.html').read_text(encoding='utf-8')
+    concept = (root / 'dist/maxine/research/synaptic-restoration/index.html').read_text(encoding='utf-8')
+    check('research/synaptic-restoration/#concept-origin' in overview, 'Missing overview link to concept origin')
+    check('id="concept-origin"' in concept and 'id="concept-origin-title"' in concept,
+          'Missing dated origin section')
+    check('October–November 2026' in concept and 'Historical note added November 8, 2026' in concept,
+          'Missing concept-development chronology')
+    check('depression' in concept and 'R01AG083628' in concept and 'UC Santa Cruz' in concept,
+          'Origin narrative does not connect the research areas')
+    check('AI-assisted literature synthesis' in concept and 'does not establish scientific novelty' in concept,
+          'Missing origin transparency and attribution limits')
+    check('Version 1.1' in concept, 'Missing research editorial update version')
     library = (root / 'dist/maxine/research/references/index.html').read_text(encoding='utf-8')
     for r in REFERENCES:
         check('id="' + r['id'] + '"' in library, 'Missing citation target')
