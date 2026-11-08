@@ -67,7 +67,7 @@ def run_checks(root=ROOT):
     check('AI-assisted literature synthesis' in concept and 'does not establish scientific novelty' in concept,
           'Missing origin transparency and attribution limits')
     check('Version 1.1' in concept, 'Missing research editorial update version')
-        library = (root / 'dist/maxine/research/references/index.html').read_text(encoding='utf-8')
+    library = (root / 'dist/maxine/research/references/index.html').read_text(encoding='utf-8')
     for r in REFERENCES:
         check('id="' + r['id'] + '"' in library, 'Missing citation target')
         if 'doi' in r:
