@@ -60,7 +60,11 @@ def run_checks(root=ROOT):
         doc = Doc(html)
         check(doc.h1 == 1, mode + ': memorial must have one H1')
         check(len(doc.ids) == len(set(doc.ids)), mode + ': duplicate IDs')
-        check(doc.images == 1 and doc.forms == 0, mode + ': exactly one family portrait and no data form')
+        narrative = Doc(html.split('<main id="main" tabindex="-1">', 1)[1].split('</main>', 1)[0])
+        check(narrative.images == 1 and doc.forms == 0,
+              mode + ': exactly one narrative family portrait and no data form')
+        check(doc.images == 3 and html.count('class="maxine-brand__frame"') == 2,
+              mode + ': only the approved header and footer portraits may accompany the narrative')
         check('src="assets/maxine-portrait.webp"' in html and 'alt="Portrait of Doris Maxine Boggs' in html,
               mode + ': portrait source or alt text missing')
         check((base / 'maxine/assets/maxine-portrait.webp').is_file() and

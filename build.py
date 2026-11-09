@@ -12,6 +12,7 @@ from content import BRANDS, RESOURCES, SOURCES, DATE, SCOPE, RELATIONSHIP
 from family_story import family_story
 from meet_maxine import meet_maxine_page
 from family_account import family_account_page
+from brand_identity import brand_markup
 from research import RESEARCH_PAGES, research_page, home_feature, founder_section
 E=html.escape
 REVIEW=not ('--public' in sys.argv or os.environ.get('LAUNCH_MODE') == 'public')
@@ -48,11 +49,11 @@ def header(b, prefix, sibling, active):
   nav_items.insert(2,('meet-maxine','Meet Maxine'))
   nav_items.insert(3,('research','Research & Innovation'))
  nav=''.join('<a href="'+prefix+(path+'/' if path=='research' else path+'.html')+'"'+(' aria-current="page"' if active==path else '')+'>'+E(name)+'</a>' for path,name in nav_items)
- return '<a class="skip-link" href="#main">Skip to main content</a>'+banner+'<div class="switcher"><div class="wrap"><span class="switcher-label">Shared inspiration. Distinct purposes.</span><div class="switcher-actions"><nav class="tabs" aria-label="Choose a website">'+tab('wholemind',links['wholemind'])+tab('maxine',links['maxine'])+'</nav>'+appearance+'</div></div></div><header class="brand-header wrap"><a href="'+prefix+'index.html'+'" class="wordmark">'+c['name']+'</a><nav class="section-nav" aria-label="Main navigation">'+nav+'</nav></header>'
+ return '<a class="skip-link" href="#main">Skip to main content</a>'+banner+'<div class="switcher"><div class="wrap"><span class="switcher-label">Shared inspiration. Distinct purposes.</span><div class="switcher-actions"><nav class="tabs" aria-label="Choose a website">'+tab('wholemind',links['wholemind'])+tab('maxine',links['maxine'])+'</nav>'+appearance+'</div></div></div><header class="brand-header wrap"><a href="'+prefix+'index.html'+'" class="wordmark">'+brand_markup(b,prefix,c['name'])+'</a><nav class="section-nav" aria-label="Main navigation">'+nav+'</nav></header>'
 
 def footer(b,prefix):
  c=BRANDS[b]
- return '<footer class="site-footer"><div class="wrap"><p class="wordmark">'+c['name']+'</p><p>'+E(c['footer'])+'</p><p class="footer-small">'+E(SCOPE)+'</p><div class="footer-meta"><span>Dignity. Connection. Fuller living.</span><nav aria-label="Footer">'+''.join('<a href="'+prefix+p+'.html">'+label+'</a>' for p,label in [('relationship','Our relationship'),('privacy','Privacy'),('accessibility','Accessibility')])+'</nav></div></div></footer>'
+ return '<footer class="site-footer"><div class="wrap"><p class="wordmark">'+brand_markup(b,prefix,c['name'],footer=True)+'</p><p>'+E(c['footer'])+'</p><p class="footer-small">'+E(SCOPE)+'</p><div class="footer-meta"><span>Dignity. Connection. Fuller living.</span><nav aria-label="Footer">'+''.join('<a href="'+prefix+p+'.html">'+label+'</a>' for p,label in [('relationship','Our relationship'),('privacy','Privacy'),('accessibility','Accessibility')])+'</nav></div></div></footer>'
 
 def connect(b):
  c=BRANDS[b]
@@ -116,7 +117,7 @@ def document(b,path,body,prefix,sibling):
  robots='noindex, nofollow' if REVIEW or path=='404.html' else 'index, follow'
  font='<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet">'
  head=f'<!doctype html><html lang="en" data-brand="{b}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{E(title)} — {c["name"] if title!=c["name"] else "Dignity. Connection. Fuller living."}</title><meta name="description" content="{E(description,quote=True)}"><meta name="robots" content="{robots}"><link rel="canonical" href="{canonical}"><meta property="og:type" content="website"><meta property="og:title" content="{E(title,quote=True)}"><meta property="og:description" content="{E(description,quote=True)}"><meta property="og:url" content="{canonical}"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#F7F3EB"><script src="{prefix}assets/appearance-init.js?v=appearance-1"></script>{font}<link rel="stylesheet" href="{prefix}assets/site.css?v=appearance-1"><script src="{prefix}assets/site.js?v=appearance-1" defer></script></head>'
- if b=='maxine': head=head.replace('</head>', '<link rel="stylesheet" href="'+prefix+'assets/research.css?v=research-1"></head>')
+ if b=='maxine': head=head.replace('</head>', '<link rel="stylesheet" href="'+prefix+'assets/research.css?v=research-1"><link rel="stylesheet" href="'+prefix+'assets/brand-identity.css?v=portrait-1"></head>')
  return head+'<body data-brand="'+b+'">'+header(b,prefix,sibling,kind)+'<main id="main" tabindex="-1">'+body+'</main>'+footer(b,prefix)+'</body></html>'
 
 HEADERS='''/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'\n'''

@@ -20,8 +20,11 @@ def run_checks(root=ROOT):
         check(not (base / 'wholemind' / 'resources' / 'preserving-their-story.html').exists(),
               mode + ': guide leaked to WholeMind')
         html = path.read_text(encoding='utf-8')
-        check(html.count('<h1>') == 1 and '<form' not in html and '<img ' not in html,
+        guide = html.split('<main id="main" tabindex="-1">', 1)[1].split('</main>', 1)[0]
+        check(html.count('<h1>') == 1 and '<form' not in html and '<img ' not in guide,
               mode + ': malformed guide or unnecessary data/image collection')
+        check(html.count('<img ') == 2 and html.count('class="maxine-brand__frame"') == 2,
+              mode + ': only the approved header and footer portraits are permitted')
         check('<meta name="robots" content="noindex, nofollow">' in html,
               mode + ': review indexing boundary removed')
         check('Preserving Their Story' in html and

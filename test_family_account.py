@@ -51,8 +51,11 @@ def run_checks(root=ROOT):
         doc = Page(html)
         check(doc.h1s == 1 and len(doc.ids) == len(set(doc.ids)),
               mode + ': heading or IDs are invalid')
-        check(doc.images == 0 and doc.forms == 0,
-              mode + ': unapproved imagery or data form detected')
+        narrative = Page(html.split('<main id="main" tabindex="-1">', 1)[1].split('</main>', 1)[0])
+        check(narrative.images == 0 and doc.forms == 0,
+              mode + ': unapproved narrative imagery or data form detected')
+        check(doc.images == 2 and html.count('class="maxine-brand__frame"') == 2,
+              mode + ': only the approved header and footer portraits are permitted')
         check('noindex, nofollow' in doc.robots,
               mode + ': review-only indexing boundary changed')
         check('https://themaxineproject.org/family-account.html' in doc.canonicals,
